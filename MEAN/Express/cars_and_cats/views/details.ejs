@@ -11,12 +11,16 @@
             height:200px;
             width: 200px;
         }
-    </style>
+    </style>    
 
 </head>
 <body>
-    <img src="lion.jpg" alt="">
-    <img src="tiger.jpg" alt="">
-    <img src="burr.jpg" alt="">
+    <h1>Details page for <%= info.name.toUpperCase() %></h1>
+    <img src="<%= info.name %>.jpg" alt="">
+    <ul>
+        <% for (var key in info) { %>
+            <li><%= key %> : <%= info[key] %> </li>
+        <% } %>
+    </ul>
 </body>
 </html>
