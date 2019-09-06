@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Add a student to all bootcamp courses</title>
+    {% load static %}
+    <link rel='stylesheet' href="{% static 'courses_app/css/bootstrap.css' %}">
+    <link rel='stylesheet' href="{% static 'courses_app/css/style.css' %}">
+</head>
+
+<body>
+    <div class='container'>
+        <form action="{% url 'courses:add' %}" class="form-courses" method="POST">
+        {% csrf_token %}
+            <div class="form-group">
+                <h1 class="h3 mb-3 font-weight-normal mt-3">Add a new course</h1>
+
+                <div class="invalid-feedback" id="errors">
+                    {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+
+                <label for="exampleFormControlInput1" class="sr-only"><h5>Course name</h5></label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="name" placeholder="Course name">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1" class="sr-only"><h5>Course description</h5></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" placeholder="Course description..."></textarea>
+            </div>
+
+            <div class="form-group text-right">
+                <button class="btn btn-success" type="submit">Add</button>
+            </div>
+        </form>
+
+        <table class="table table-striped table-hover table-bordered table-width">
+                <h1 class="h3 mb-3 font-weight-normal mt-3">Courses</h1>
+            <thead>
+                <tr>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for course in courses %}
+                <tr>
+                    <td>{{course.name}}</td>
+                    <td>{{course.description.description}}</td>
+                    <td>{{course.created_at}}</td>
+                    <td><ul>
+                            <li><a href="{% url 'courses:confirm' course_id=course.id %} ">remove</a></li>
+                            <li><a href="{% url 'courses:comments' course_id=course.id %}">comment</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

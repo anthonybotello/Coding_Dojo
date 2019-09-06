@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CheckerBoard</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/checkerboard.css') }}">
+    <style>
+        .container div:nth-child(2n+1) div:nth-child(2n+1), .container div:nth-child(2n) div:nth-child(2n){
+            background-color: {{ color_1 }};
+        }
+        .container div:nth-child(2n+1) div:nth-child(2n), .container div:nth-child(2n) div:nth-child(2n+1){
+            background-color: {{ color_2 }};
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {% for i in range(num_rows) %}
+            <div>
+                {% for i in range(num_columns) %}
+                    <div></div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

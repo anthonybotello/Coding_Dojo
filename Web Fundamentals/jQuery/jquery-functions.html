@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery functions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <style>*{
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .functionbox{
+            width: 1000px;
+            text-align: center;
+            border-bottom: 2px solid black;
+            padding: 20px 0px;
+        }
+        .functionbox button{
+            height: 30px;
+            width: 100px;
+            font-weight: bold;
+        }
+        .red{
+            color: red;
+        }
+        #val p{
+            font-size: 12pt;
+        }</style>
+
+    <script>
+        $(document).ready(function(){
+        //jQuery goes here
+        
+        $("#addclass button").click(function(){
+            $("#addclass p").addClass('red');
+        });
+
+        $("#hideandshow #hide").click(function(){
+            $("#hideandshow p").hide();
+        });
+
+        $("#hideandshow #show").click(function(){
+            $("#hideandshow p").show();
+        });
+
+        $("#toggle button").click(function(){
+            $("#toggle p").toggle();
+        });
+
+        $("#slideupdown #slideup").click(function(){
+            $("#slideupdown p").slideUp();
+        });
+
+        $("#slideupdown #slidedown").click(function(){
+            $("#slideupdown p").slideDown();
+        });
+
+        $("#toggleslide button").click(function(){
+            $("#toggleslide p").slideToggle();
+        });
+
+        $("#fadeinout #fadein").click(function(){
+            $("#fadeinout p").fadeIn();
+        });
+
+        $("#fadeinout #fadeout").click(function(){
+            $("#fadeinout p").fadeOut();
+        });
+
+        $("#beforeafter #before").click(function(){
+            $("#before").before($("#beforeafter p"));
+        });
+
+        $("#beforeafter #after").click(function(){
+            $("#after").after($("#beforeafter p"));
+        });
+
+        $("#appendremove #append").click(function(){
+            $("#appendremove").append("<img src='http://www.irregularwebcomic.net/annotations/annot1420a.gif'>");
+        });
+
+       $("#appendremove #remove").click(function(){
+            $("#appendremove img").remove();
+        });
+
+        $("#html button").click(function(){
+            $("#html p").html("<a href=''>Click button to change this paragraph's 'p' tag into an 'a' tag.</a>")
+        });
+
+        $("#attr #width").click(function(){
+            var imgwidth = $('#attr img')[0].width + 5;
+            $("#attr img").attr("width",imgwidth);
+        });
+
+        $("#attr #height").click(function(){
+            var imgheight = $('#attr img')[0].height + 5;
+            $("#attr img").attr("height",imgheight);
+        });
+
+        $("#val button").click(function(){
+            var fontsize = $("#val input").val() +'pt';
+            $("#val p").css("font-size",fontsize);
+        });
+
+        $("#text button").click(function(){
+            var partext = $("#text input").val();
+            console.log(partext);
+            $("#text p").text(partext);
+        });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="addclass" class="functionbox">
+            <h1>AddClass</h1>
+            <button>addClass</button>
+            <p>Click button to add class "red" to this paragraph.</p>
+        </div>
+
+
+        <div id="hideandshow" class="functionbox">
+            <h1>Hide and Show</h1>
+            <button id="hide">Hide</button>
+            <button id="show">Show</button>
+            <p>Click buttons to hide or show this paragraph.</p>
+        </div>
+
+        <div id="toggle" class="functionbox">
+            <h1>Toggle</h1>
+            <button>Toggle</button>
+            <p>Click button to toggle this paragraph.</p>
+        </div>
+
+        <div id="slideupdown" class="functionbox">
+            <h1>Slide Up and Down</h1>
+            <button id="slideup">Slide Up</button>
+            <button id="slidedown">Slide Down</button>
+            <p>Click buttons to slide this paragraph up or down.</p>
+        </div>
+
+        <div id="toggleslide" class="functionbox">
+            <h1>Toggle Slide</h1>
+            <button>Toggle Slide</button>
+            <p>Click button to toggle slide this paragraph.</p>
+        </div>
+
+        <div id="fadeinout" class="functionbox">
+            <h1>Fade In and Out</h1>
+            <button id="fadeout">Fade Out</button>
+            <button id="fadein">Fade In</button>
+            <p>Click buttons to fade this paragraph in or out.</p>
+        </div>
+
+        <div id="beforeafter" class="functionbox">
+            <h1>Before and After</h1>
+            <button id="before">Before</button>
+            <button id="after">After</button>
+            <p>Click buttons to move this paragraph before or after the buttons.</p>
+        </div>
+
+        <div id="appendremove" class="functionbox">
+            <h1>Append and Remove</h1>
+            <button id="append">Append</button>
+            <button id="remove">Remove</button>
+            <p>Click buttons to append or remove Maxwell's equations.</p>
+        </div>
+
+        <div id="html" class="functionbox">
+            <h1>HTML</h1>
+            <button>Change Tag</button>
+            <p>Click button to change this paragraph's 'p' tag into an 'a' tag.</p>
+        </div>
+
+        <div id="attr" class="functionbox">
+            <h1>Attribute</h1>
+            <button id="width">Change Width</button>
+            <button id="height">Change Height</button>
+            <p>Use buttons to change the height and width of  Maxwell's equations.</p>
+            <img src='http://www.irregularwebcomic.net/annotations/annot1420a.gif' width="" height="">
+        </div>
+
+        <div id="val" class="functionbox">
+            <h1>Value</h1>
+            <input type="text" value="">
+            <button>Go</button>
+            <p>Enter a number and click button to change this paragraph's font size.
+            </p>
+        </div>
+
+        <div id="text" class="functionbox">
+                <h1>Text</h1>
+                <input type="text" value="">
+                <button>Go</button>
+                <p>Enter what you want this paragraph to say and click button.
+                </p>
+            </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.proj-img{
+    width: 200px;
+    vertical-align: center;
+}
+.myprojects{
+    max-width: 70%;
+    max-height: 400px;
+    margin-left: 10rem;
+}
+.contactform{
+    max-width: 50%;
+    margin-left: 16.5rem;
+}

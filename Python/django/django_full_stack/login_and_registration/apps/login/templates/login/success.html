@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Welcome</title>
+    {% load static %}
+    <link rel='stylesheet' href="{% static 'login/css/bootstrap.css' %}">
+    <style>#no-bg{background-color: transparent;}</style>
+
+</head>
+
+<body class="text-center">
+    <div class="jumbotron jumbotron-fluid" id="no-bg">
+        <div class="container">
+            <h1 class="display-4">Success! Welcome{{user}}!</h1>
+            <p class="lead text-success">Successfully registered (or logged in)!</p>
+        </div>
+    </div>
+    <a class="btn btn-primary" href="/logout" role="button">Log Out</a>
+</body>
+</html>

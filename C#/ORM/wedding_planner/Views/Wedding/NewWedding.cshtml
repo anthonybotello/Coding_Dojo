@@ -1,0 +1,58 @@
+@{
+    @model Wedding
+    ViewData["Title"] = "New Wedding";
+}
+
+<div class="row justify-content-between">
+    <div class="col-8"><h2>Plan Your Wedding</h2></div>
+    <div class="col-2 text-right align-self-end">
+        <a href="/dashboard" class="btn-sm btn-primary">Dashboard</a>
+        <a href="/logout" class="btn-sm btn-secondary">Log Out</a>
+    </div>
+</div>
+
+<form asp-controller="Wedding" asp-action="AddWedding" method="post">
+    <input type="hidden" asp-for="CreatorId" value="@ViewBag.CreatorId">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="WedderOne">Wedder One</label>
+      <input asp-for="WedderOne" class="form-control" id="WedderOne">
+      <div class="invalid-feedback d-block"><span asp-validation-for="WedderOne"></span></div>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="WedderTwo">Wedder Two</label>
+      <input asp-for="WedderTwo" class="form-control" id="WedderTwo">
+      <div class="invalid-feedback d-block"><span asp-validation-for="WedderTwo"></span></div>
+    </div>
+    
+    <div class="form-group col-md-4">
+      <label for="WeddingDate">Date</label>
+      <input asp-for="Date" class="form-control" id="WeddingDate">
+      <div class="invalid-feedback d-block"><span asp-validation-for="Date"></span></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input asp-for="WeddingAddress.StreetAddress" class="form-control" id="inputAddress" placeholder="Ex: 1234 Main St">
+    <div class="invalid-feedback d-block"><span asp-validation-for="WeddingAddress.StreetAddress"></span></div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input asp-for="WeddingAddress.City" class="form-control" id="inputCity">
+      <div class="invalid-feedback d-block"><span asp-validation-for="WeddingAddress.City"></span></div>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <input asp-for="WeddingAddress.State" class="form-control" id="inputState" placeholder="Two-letter state abbreviation">
+      <div class="invalid-feedback d-block"><span asp-validation-for="WeddingAddress.State"></span></div>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip Code</label>
+      <input asp-for="WeddingAddress.ZipCode" class="form-control" id="inputZip" placeholder="Five-digit zip code">
+      <div class="invalid-feedback d-block"><span asp-validation-for="WeddingAddress.ZipCode"></span></div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>

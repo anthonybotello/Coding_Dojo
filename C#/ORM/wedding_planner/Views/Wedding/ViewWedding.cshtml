@@ -1,0 +1,41 @@
+@{
+    @model Wedding
+    ViewData["Title"] = Model.WedderOne + " & " + Model.WedderTwo;
+    string Location = Model.WeddingAddress.StreetAddress.Replace(" ","+") + "+" + Model.WeddingAddress.City + "+" + Model.WeddingAddress.State;
+}
+
+<div class="row justify-content-between">
+    <div class="col-8"><h2>@Model.WedderOne & @Model.WedderTwo's Wedding</h2></div>
+    <div class="col-2 text-right align-self-end">
+        <a href="/dashboard" class="btn-sm btn-primary">Dashboard</a>
+        <a href="/logout" class="btn-sm btn-secondary">Log Out</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <h4>Date: @(((DateTime)Model.Date).ToString("MMMM d, yyyy"))</h4>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <h5 class="col">Guests:</h5>
+</div>
+<div class="row">
+    <ul class="col list-group">
+        @foreach(RSVP guest in Model.Guests)
+        {
+            <li class="list-group-item border-0 bg-transparent">@guest.User.FirstName @guest.User.LastName</li>
+        }
+    </ul>
+    <div class="col">
+        <iframe
+  width="300"
+  height="250"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCdUks3JrPpvZburpVOnTG4fFklz2szjcA
+    &q=@Location" allowfullscreen>
+</iframe>
+        
+    </div>
+</div>

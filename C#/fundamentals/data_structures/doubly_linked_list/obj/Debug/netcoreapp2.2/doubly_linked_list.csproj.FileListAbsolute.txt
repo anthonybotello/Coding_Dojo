@@ -1,0 +1,11 @@
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\doubly_linked_list\bin\Debug\netcoreapp2.2\doubly_linked_list.deps.json
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\doubly_linked_list\bin\Debug\netcoreapp2.2\doubly_linked_list.runtimeconfig.json
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\doubly_linked_list\bin\Debug\netcoreapp2.2\doubly_linked_list.runtimeconfig.dev.json
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\doubly_linked_list\bin\Debug\netcoreapp2.2\doubly_linked_list.dll
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\doubly_linked_list\bin\Debug\netcoreapp2.2\doubly_linked_list.pdb
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\doubly_linked_list\obj\Debug\netcoreapp2.2\doubly_linked_list.csprojAssemblyReference.cache
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\doubly_linked_list\obj\Debug\netcoreapp2.2\doubly_linked_list.csproj.CoreCompileInputs.cache
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\doubly_linked_list\obj\Debug\netcoreapp2.2\doubly_linked_list.AssemblyInfoInputs.cache
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\doubly_linked_list\obj\Debug\netcoreapp2.2\doubly_linked_list.AssemblyInfo.cs
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\doubly_linked_list\obj\Debug\netcoreapp2.2\doubly_linked_list.dll
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\doubly_linked_list\obj\Debug\netcoreapp2.2\doubly_linked_list.pdb

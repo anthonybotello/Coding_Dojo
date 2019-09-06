@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Home</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/product/">
+    {% load static %}
+    <link rel='stylesheet' href="{% static 'in_stock_app/css/bootstrap.css' %}">
+    <link rel='stylesheet' href="{% static 'in_stock_app/css/product.css' %}">
+    <link rel='stylesheet' href="{% static 'in_stock_app/css/style.css' %}">
+    <style>#sign-in-margin{margin-left:6.25rem;}</style>
+</head>
+
+<body>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <div class="col-md-5 mx-auto inl-blk">
+        <table class="table">
+            <h3>Popular Today</h3>
+            <thead>
+                <tr>
+                    <th class="font-weight-normal">#</th>
+                    <th class="font-weight-normal">Symbol</th>
+                    <th class="font-weight-normal">Open</th>
+                    <th class="font-weight-normal">High</th>
+                    <th class="font-weight-normal">Low</th>
+                    <th class="font-weight-normal">Last</th>
+                    <th class="font-weight-normal">Volume</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">MSFT</a></td>
+                    <td>138.90</td>
+                    <td>140.56</td>
+                    <td>138.85</td>
+                    <td>140.37</td>
+                    <td>14,223,997</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#">AMZN</a></td>
+                    <td>1969.30</td>
+                    <td>1998.78</td>
+                    <td>1966.01</td>
+                    <td>1998.50</td>
+                    <td>1,975,141</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="#">AAPL</a></td>
+                    <td>207.67</td>
+                    <td>209.15</td>
+                    <td>207.17</td>
+                    <td>208.50</td>
+                    <td>11,759,937</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-5 inl-blk text-center" id="sign-in-margin">
+    <h1 class="display-4 font-weight-normal">Welcome!</h1>
+    <p class="lead font-weight-normal">Placeholder text.</p>
+    <a class="btn btn-primary" href="{% url 'dashboard' %}">Sign In</a>
+    <p class="mb-0 mt-3">Don't have an account? <a href="#">Register</a></p>
+  </div>
+</div>
+
+<footer class="container pb-3">
+  <div class="row">
+    <div class="col-12 col-md">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+      <small class="d-block mb-3 text-muted">&copy; 2017-2019</small>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Features</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Cool stuff</a></li>
+        <li><a class="text-muted" href="#">Random feature</a></li>
+        <li><a class="text-muted" href="#">Team feature</a></li>
+        <li><a class="text-muted" href="#">Stuff for developers</a></li>
+        <li><a class="text-muted" href="#">Another one</a></li>
+        <li><a class="text-muted" href="#">Last time</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Resource</a></li>
+        <li><a class="text-muted" href="#">Resource name</a></li>
+        <li><a class="text-muted" href="#">Another resource</a></li>
+        <li><a class="text-muted" href="#">Final resource</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Business</a></li>
+        <li><a class="text-muted" href="#">Education</a></li>
+        <li><a class="text-muted" href="#">Government</a></li>
+        <li><a class="text-muted" href="#">Gaming</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Team</a></li>
+        <li><a class="text-muted" href="#">Locations</a></li>
+        <li><a class="text-muted" href="#">Privacy</a></li>
+        <li><a class="text-muted" href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</html>

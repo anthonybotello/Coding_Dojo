@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Great Number Game</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 5px;
+        }
+        .container{
+            margin: 100px auto;
+        }
+        body{
+            text-align: center;
+        }
+        .wrong,.right{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .wrong h1{
+            margin-top: 75px;
+        }
+        .right h1{
+            margin-top: 50px;
+        }
+        .wrong{
+            background-color: red;
+        }
+        .right{
+            background-color: green;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the Great Number Game!</h1>
+        <h3>I am thinking of a number between 1 and 100</h3>
+        <h3>Take a guess!</h3>
+
+        {% if guess == 'low' or guess == 'high' %}
+            {% if session['count'] < 5 %}
+            <div class="wrong">
+                <h1>Too {{ guess }}!</h1>
+            </div>                
+            {% endif %}
+
+            {% if session['count'] >= 5 %}
+            <div class="wrong">
+                <script>
+                    $(document).ready(function(){
+                    $('#guess_form').remove();
+                    });
+                </script>
+                <h1>You lose!</h1>
+            </div>
+            <form action="/play_again">
+                <button type='submit'>Try again!</button>
+            </form>
+            {% endif %}
+        {% endif %}
+
+        {% if guess == 'correct' and session['count'] <=5 %}
+            <div class="right">
+                <script>
+                    $(document).ready(function(){
+                    $('#guess_form').remove();
+                    });
+                </script>
+                <h1>{{ session['guess'] }} was the number!</h1>
+            </div>
+            <h3>Number of attemps: {{ session['count'] }}</h3>
+            {#Finish later #}
+            {# <form action="/leaderboard" method='POST'>
+                <input type="text" name="name">
+                <button type="submit">Submit Name </button>
+            </form> #}
+            <form action="/play_again">
+                <button type='submit'>Play again!</button>
+            </form>
+        {% endif %}
+
+        <form action="/process_guess" method="post" id='guess_form'>
+            <input type="text" name="guess">
+            <p><button type="submit" >Submit</button></p>
+        </form>
+
+    </div>
+</body>
+</html>
+

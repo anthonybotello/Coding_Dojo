@@ -1,0 +1,19 @@
+Message.objects.create(text="The important thing is not to stop questioning. Curiosity has its own reason for existence. One cannot help but be in awe when he contemplates the mysteries of eternity, of life, of the marvelous structure of reality. It is enough if one tries merely to comprehend a little of this mystery each day.") Einstein
+
+Message.objects.create(text="Not only is the Universe stranger than we think, it is stranger than we can think.") Heisenberg
+
+Message.objects.create(text="I think that modern physics has definitely decided in favor of Plato. In fact the smallest units of matter are not physical objects in the ordinary sense; they are forms, ideas which can be expressed unambiguously only in mathematical language.") Heisenberg
+
+Message.objects.create(text="Consciousness cannot be accounted for in physical terms. For consciousness is absolutely fundamental. It cannot be accounted for in terms of anything else.") Schrodinger
+
+Message.objects.create(text="We ought to regard the present state of the universe as the effect of its antecedent state and as the cause of the state that is to follow. An intelligence knowing all the forces acting in nature at a given instant, as well as the momentary positions of all things in the universe, would be able to comprehend in one single formula the motions of the largest bodies as well as the lightest atoms in the world, provided that its intellect were sufficiently powerful to subject all data to analysis; to it nothing would be uncertain, the future as well as the past would be present to its eyes. The perfection that the human mind has been able to give to astronomy affords but a feeble outline of such an intelligence.") Laplace
+
+Give me a place to stand, a lever long enough and a fulcrum. and I can move the Earth. -- Archimedes
+
+
+
+
+User.objects.create(first_name="Albert",last_name="Einstein",email="einstein@phys.org",password="relativity")
+User.objects.create(first_name="Werner",last_name="Heisenberg",email="heisenberg@phys.org",password="matricesrule")
+User.objects.create(first_name="Erwin",last_name="Schrodinger",email="schrodinger@phys.org",password="waves4ever")
+User.objects.create(first_name="Pierre",last_name="Laplace",email="laplace@phys.org",password="harmonics")

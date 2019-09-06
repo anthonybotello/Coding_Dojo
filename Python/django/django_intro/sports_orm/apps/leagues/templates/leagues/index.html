@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sports Leagues</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="ml-2">Leagues</h1>
+			<ol class="list-group">
+				{% for league in leagues %}
+					<li class="list-group-item">{{league.name}}</li>
+				{% empty %}
+					<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+				{% endfor %}
+			</ol>
+			<h1 class="ml-2">Teams</h1>
+			<ol class="list-group">
+				{% for team in teams %}
+					<li class="list-group-item">{{team.location}} {{team.team_name}}</li>
+				{% empty %}
+					<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+				{% endfor %}
+			</ol>
+			<h1 class="ml-2">Players</h1>
+			<ol class="list-group">
+				{% for player in players %}
+					<li class="list-group-item">{{player.first_name}} {{player.last_name}} {{player.all_teams__count}}</li>
+				{% empty %}
+					<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+				{% endfor %}
+			</ol>
+		</div>
+	</body>
+</html>

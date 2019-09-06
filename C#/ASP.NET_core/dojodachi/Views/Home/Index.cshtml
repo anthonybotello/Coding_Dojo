@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    @model Dojodachi
+}
+<div class="mt-3">
+    <ul class="nav justify-content-center ml-4">
+        <li class="nav-item mr-4"><h4>Fullness: @Model.Fullness</h4></li>
+        <li class="nav-item mr-4"><h4>Happiness: @Model.Happiness</h4></li>
+        <li class="nav-item mr-4"><h4>Energy: @Model.Energy</h4></li>
+        <li class="nav-item mr-4"><h4>Meals: @Model.Meals</h4></li>
+    </ul>
+    <div class="border border-dark w-50 mx-auto">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/800px-SNice.svg.png" class="d-inline-block" style="width:200px; margin: 30px 170px;">
+        <h6 class="text-center mb-3">@ViewBag.Message</h6>
+    </div>
+    @if(@Model.Happiness >= 100 && @Model.Fullness >= 100)
+    {
+        <div class="text-center mt-3">
+            <a href="restart" class="btn btn-dark">Restart?</a>
+        </div>
+    }
+    else if (@Model.Happiness == 0 || @Model.Fullness == 0)
+    {
+        <div class="text-center mt-3">
+            <a href="restart" class="btn btn-dark">Restart?</a>
+        </div>
+    }
+    else
+    {
+        <div class="text-center mt-3">
+            <a href="feed" class="btn btn-success">Feed</a>
+            <a href="play" class="btn btn-primary">Play</a>
+            <a href="work" class="btn btn-danger">Work</a>
+            <a href="sleep" class="btn btn-secondary">Sleep</a>
+        </div>
+    }
+</div>

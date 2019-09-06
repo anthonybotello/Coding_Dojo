@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Create</title>
+{% load static %}
+<link rel='stylesheet' href="{% static 'tv_shows_app/css/new_show.css' %}">
+</head>
+
+<body>
+    <div class='container'>
+        <a href="/shows">Go Back</a>
+        <div class="form_wrap">
+            <h1>Add a New Show</h1>
+            <form action="/add_show" method="post">
+            {% csrf_token %}
+                <p>Title</p>
+                <input type="text" name="title">
+                <p class="error">{{request.session.errors.title}}</p>
+            
+                <ul class="form_fields">
+                    <li>
+                        <div class='network_date'>
+                            <p>Network</p>
+                            <input type="text" name="network">
+                            <p class="error">{{request.session.errors.network}}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class='network_date'>
+                            <p>Release Date</p>
+                            <input type="date" name="release_date" value="{{today}}">
+                            <p class="error">{{request.session.errors.release_date}}</p>
+                        </div>
+                    </li>
+                </ul>
+    
+                <p>Description (optional)</p>
+                <textarea name="description"></textarea>
+                <p class="error">{{request.session.errors.description}}</p> 
+
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

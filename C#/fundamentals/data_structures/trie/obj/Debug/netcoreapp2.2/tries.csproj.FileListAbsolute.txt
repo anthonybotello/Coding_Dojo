@@ -1,0 +1,11 @@
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\tries\bin\Debug\netcoreapp2.2\tries.deps.json
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\tries\bin\Debug\netcoreapp2.2\tries.runtimeconfig.json
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\tries\bin\Debug\netcoreapp2.2\tries.runtimeconfig.dev.json
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\tries\bin\Debug\netcoreapp2.2\tries.dll
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\tries\bin\Debug\netcoreapp2.2\tries.pdb
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\tries\obj\Debug\netcoreapp2.2\tries.csprojAssemblyReference.cache
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\tries\obj\Debug\netcoreapp2.2\tries.csproj.CoreCompileInputs.cache
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\tries\obj\Debug\netcoreapp2.2\tries.AssemblyInfoInputs.cache
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\tries\obj\Debug\netcoreapp2.2\tries.AssemblyInfo.cs
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\tries\obj\Debug\netcoreapp2.2\tries.dll
+C:\Users\Anthony\Desktop\C#\fundamentals\data_structures\tries\obj\Debug\netcoreapp2.2\tries.pdb

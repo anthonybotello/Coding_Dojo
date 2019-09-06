@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script>
+        $(document).ready(function(){
+            $('form').submit(() => {
+                alert("Stop being a weeb.");
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>This is the dojos page.</h1>
+    <form action="">
+        <label for="name">Your Ninja Name:</label>
+        <input type="text" id="name">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

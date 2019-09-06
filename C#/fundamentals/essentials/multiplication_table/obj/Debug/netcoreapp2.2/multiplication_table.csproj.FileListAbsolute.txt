@@ -1,0 +1,11 @@
+C:\Users\Anthony\Desktop\C#\multiplication_table\bin\Debug\netcoreapp2.2\multiplication_table.deps.json
+C:\Users\Anthony\Desktop\C#\multiplication_table\bin\Debug\netcoreapp2.2\multiplication_table.runtimeconfig.json
+C:\Users\Anthony\Desktop\C#\multiplication_table\bin\Debug\netcoreapp2.2\multiplication_table.runtimeconfig.dev.json
+C:\Users\Anthony\Desktop\C#\multiplication_table\bin\Debug\netcoreapp2.2\multiplication_table.dll
+C:\Users\Anthony\Desktop\C#\multiplication_table\bin\Debug\netcoreapp2.2\multiplication_table.pdb
+C:\Users\Anthony\Desktop\C#\multiplication_table\obj\Debug\netcoreapp2.2\multiplication_table.csprojAssemblyReference.cache
+C:\Users\Anthony\Desktop\C#\multiplication_table\obj\Debug\netcoreapp2.2\multiplication_table.csproj.CoreCompileInputs.cache
+C:\Users\Anthony\Desktop\C#\multiplication_table\obj\Debug\netcoreapp2.2\multiplication_table.AssemblyInfoInputs.cache
+C:\Users\Anthony\Desktop\C#\multiplication_table\obj\Debug\netcoreapp2.2\multiplication_table.AssemblyInfo.cs
+C:\Users\Anthony\Desktop\C#\multiplication_table\obj\Debug\netcoreapp2.2\multiplication_table.dll
+C:\Users\Anthony\Desktop\C#\multiplication_table\obj\Debug\netcoreapp2.2\multiplication_table.pdb

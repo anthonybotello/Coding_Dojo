@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "All Quotes";
+}
+<div class="mt-5 mx-auto">
+    <ul class="list-group">
+        @foreach(var quote in ViewBag.Quotes)
+        {
+            <li class="list-group-item border-top-0 border-left-0 border-right-0 mb-1"><div>
+                <p>"@quote["quote"]"</p>
+                <p class="text-center">@quote["name"] at @quote["created_at"].ToString("h:mmtt MMMM dd yyyy")</p>
+            </div></li>
+        }
+    </ul>
+    <a href="/">Go Back</a>
+</div>
+

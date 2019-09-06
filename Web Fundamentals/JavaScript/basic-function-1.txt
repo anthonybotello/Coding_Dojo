@@ -1,0 +1,62 @@
+Correctly predicted (14/15)
+
+1.
+    Prediction: 35
+    Output: 35
+
+2.
+    Prediction: 8
+    Output: 8
+
+3.
+    Prediction: 6
+    Output: 6
+
+4.
+    Prediction: 3, 9
+    Output: 3, 9
+
+5.
+    Prediction: 40
+    Output: 40
+
+6.
+    Prediction: 4
+    Output: 4
+
+7.
+    Prediction: 10, 3, 30
+    Output: 10, 3, 30
+
+8.
+    Prediction: 3, 4
+    Output: 3, 4
+
+9.
+    Prediction: 2, 5, 8, 11
+    Output: 2, 5, 8, 11
+
+10.
+    Prediction: integers 0 to 9 twice, 0
+    Output: integers 0 to 9 twice, 0
+
+11.
+    Prediction: integers 0 to 9, i for i from 0 to 9
+    Output: no output
+
+12.
+    Prediction: no output
+    Output: no output
+
+13.
+    Prediction: 10
+    Output: 10
+
+14.
+    Prediction: 15, 10
+    Output: 15, 10
+
+15.
+    Prediction: 15, 15
+    Output: 15, 15
+

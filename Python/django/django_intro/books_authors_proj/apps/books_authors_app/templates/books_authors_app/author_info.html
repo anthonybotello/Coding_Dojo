@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Books & Authors</title>
+{% load static %}
+<link rel='stylesheet' href="{% static 'books_authors_app/css/style.css' %}">
+</head>
+
+<body>
+    <div class='container'>
+        <h1>{{author.first_name}} {{author.last_name}}</h1>
+        <ul class='book_info'>
+            <li><h4>ID: </h4><p>{{author.id}}</p></li>
+            <li><h4>Notes:</h4> <p>{{author.notes}}</p></li>
+            <li></li>
+            <li><h4>Books:</h4>
+                <ul class='authors'>
+                    {% for book in author.books.all %}
+                        <li>{{book.title}}</li>
+                    {% endfor %}
+                    <form action="add_book" method="post">
+                    {% csrf_token %}
+                        <input type="hidden" name="author_id" value='{{author.id}}'>
+                        <select name="book_id">
+                                <option value="" disabled selected>-select a book-</option>
+                            {% for book in books %}
+                                {% if book not in author.books.all %}
+                                    <option value="{{book.id}}">{{book.title}}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    <button type="submit">Add</button>
+                    </form>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

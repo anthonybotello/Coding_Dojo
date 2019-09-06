@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Dojo Survey Index";
+}
+@model Survey;
+
+<h2><u>Submitted Info</u></h2>
+<ul class="list-group">
+    <li class="list-group-item border-0">
+        Name: @Model.Name
+    </li>
+    <li class="list-group-item border-0">
+        Dojo Location: @Model.Location
+    </li>
+    <li class="list-group-item border-0">
+        Favorite Language: @Model.Language
+    </li>
+    <li class="list-group-item border-0">
+        Comment: @Model.Comment
+    </li>
+</ul>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disappearing Differential Equations</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        width: 940px;
+        margin: 0 auto;
+    }
+    .container img{
+        height:210px;
+        width:210px;
+        border: 1px solid black;
+        padding:5px;
+        margin: 5px;
+    }
+    .container button{
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+        padding: 5px;
+    }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            
+            $(".container img").click(function(){
+                $(this).fadeOut();
+            });
+
+            $(".container button").click(function(){
+                $(".container img").fadeIn();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="http://www.irregularwebcomic.net/annotations/annot1420a.gif" alt="Maxwell's Equations">
+        <img src="http://www.irregularwebcomic.net/annotations/annot1420a.gif" alt="Maxwell's Equations">
+        <img src="http://www.irregularwebcomic.net/annotations/annot1420a.gif" alt="Maxwell's Equations">
+        <img src="http://www.irregularwebcomic.net/annotations/annot1420a.gif" alt="Maxwell's Equations">
+        <img src="http://www.irregularwebcomic.net/annotations/annot1420a.gif" alt="Maxwell's Equations">
+        <img src="http://www.irregularwebcomic.net/annotations/annot1420a.gif" alt="Maxwell's Equations">
+        <img src="http://www.irregularwebcomic.net/annotations/annot1420a.gif" alt="Maxwell's Equations">
+        <img src="http://www.irregularwebcomic.net/annotations/annot1420a.gif" alt="Maxwell's Equations">
+        <button>Restore</button>
+
+    </div>
+</body>
+</html>

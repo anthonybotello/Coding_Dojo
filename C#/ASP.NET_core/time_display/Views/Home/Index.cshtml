@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Time Display</title>
+    <link rel="stylesheet" href="~/css/bootstrap.css"/>
+</head>
+
+<body>
+    <div class='container text-center mt-3'>
+        <h2 class="align-middle">The current time and date:</h2>
+        @{
+            string date = DateTime.Now.ToString("MMM d, yyyy");
+            string time = DateTime.Now.ToString("h:mm tt");
+        }
+        <div class="border border-dark w-50 mx-auto">
+            <h1 class="align-middle">@date</h1>
+            <h1 class="align-middle">@time</h1>
+        </div>
+    </div>
+</body>
+</html>

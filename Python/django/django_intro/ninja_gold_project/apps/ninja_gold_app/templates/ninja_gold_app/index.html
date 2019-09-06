@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ninja Gold</title>
+    {% load static %}
+    <link rel='stylesheet' href="{% static 'ninja_gold_app/css/style.css' %}">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script>
+        $(document).ready(function(){
+            $('.activity_log').scrollTop(1000);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td><h4>Your Gold:</h4></td>
+                <td><p>{{request.session.gold}}</p></td>
+            </tr>
+        </table>
+        <ul>
+            <li>
+                <div class="building">
+                    <h3>Farm</h3>
+                    <p>(earns 10-20 golds)</p>
+                    <form action="/process_money" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="building" value="farm">
+                        <input type="submit" value="Find Gold!">
+                    </form>
+                </div>
+            </li>
+
+            <li>
+                <div class="building">
+                    <h3>Cave</h3>
+                    <p>(earns 5-10 golds)</p>
+                    <form action="/process_money" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="building" value="cave">
+                        <input type="submit" value="Find Gold!">
+                    </form>
+                </div>
+            </li>
+
+            <li>
+                <div class="building">
+                    <h3>House</h3>
+                    <p>(earns 2-5 golds)</p>
+                    <form action="/process_money" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="building" value="house">
+                        <input type="submit" value="Find Gold!">
+                    </form>
+                </div>
+            </li>
+
+            <li>
+                <div class="building">
+                    <h3>Casino</h3>
+                    <p>(earns/takes 0-50 golds)</p>
+                    <form action="/process_money" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="building" value="casino">
+                        <input type="submit" value="Find Gold!">
+                    </form>
+                </div>
+            </li>
+        </ul>
+        <p class='activity'>Activities:</p>
+        <div class='activity_log'>
+            {% for event in request.session.history %}
+                {% if 'lost' in event  %}
+                <p class='minus_gold'>{{ event }}</p> 
+
+                {% elif 'earned' in event.lower  %}
+                    <p class="plus_gold">{{ event }}</p>
+                
+                {% else %}
+                    <p>{{ event }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <form action="/restart" class="restart">
+            <input type="submit" value="Restart Game">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hunting Github</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"\>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $.get("https://api.github.com/users/anthonybotello",displayName)
+
+                function displayName(data){
+                    $('h1').text(data.name);
+                }
+            })
+            
+
+        });
+    </script>
+
+</head>
+<body>
+    <div class="container text-center mt-4">
+        <button class="btn btn-primary">Get Name</button>
+        <h1></h1>
+    </div>
+</body>
+</html>

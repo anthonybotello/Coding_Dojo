@@ -1,0 +1,134 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    width:1000px;
+    margin: 0px auto;
+    background-image: linear-gradient(-45deg,black ,#6f5964,black);
+}
+
+.header{
+    height:60px;
+    background-color:#f8f8f8;
+}
+.header h1,.header h2{
+    display: inline-block;
+    padding: 15px;
+}
+.header h2{
+    margin-left:400px;
+}
+
+.portrait{
+    width: 400px;
+    height: 263px;
+    border: 4px solid #c0c0c0;
+    margin: 20px 10px 10px 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bio{
+    width: 527px;
+    height: 271px;
+    margin:20px 20px 20px 10px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+}
+.small_headers{
+    padding: 10px;
+    color:white;
+    background-image: linear-gradient(#adadb2,#878593,#adadb2);
+}
+.bio p,.bio a{
+    text-align: justify;
+    padding:10px;
+    background-image: linear-gradient(to right,white,#adadb2);
+}
+.bio a{
+    height: inherit;
+    display: block;
+}
+
+.project-1,.project-2,.project-3{
+    width: 304px;
+    display:inline-block;
+    background-image: linear-gradient(to right,white,#adadb2);
+}
+.project-1{
+    margin:10px 10px 20px 20px; 
+}
+.project-2{
+    margin:10px 10px 20px 10px;
+}
+.project-3{
+    margin:10px 20px 20px 10px;
+}
+.project_images{
+    width:304px;
+    height: 167px;
+}
+.project_descriptions{
+    height:165px;
+    padding:10px;
+    background-image: linear-gradient(to right,white,#adadb2);
+    text-align: justify;
+}
+.project-1 ul,.project-2 ul,.project-3 ul{
+    display: inline-block;
+    padding:10px;
+}
+.project-1 ul li,.project-2 ul li,.project-3 ul li{
+    display: inline-block;
+}
+.tech_images{
+    width:50px;
+    height:50px;
+    padding:1px;
+}
+.project-1 a,.project-2 a,.project-3 a{
+    width:fit-content;
+    display: inline-block;
+    color: white;
+    background-color: #407d61;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    padding:10px;
+    box-shadow: 5px 5px 2px grey;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+.project-1 a{
+    margin-left: 110px;
+}
+.project-2 a{
+    margin-left: 86px;
+}
+.project-3 a{
+    margin-left: 102px;
+}
+.footer{
+    background-color: #fcfcfc;
+    padding: 10px;
+}
+.footer p{
+    text-align: center;
+    padding-bottom:10px;
+}
+.footer ul{
+    display: inline-block;
+    margin-left: 325px;
+    padding-bottom: 10px;
+}
+.footer ul li{
+    font-style: italic;
+    display:inline-block;
+}
+.contact_images{
+    height: 25px;
+    width: 25px;
+}

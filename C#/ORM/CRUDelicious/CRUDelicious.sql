@@ -1,0 +1,3 @@
+LOCK TABLES `dishes` WRITE;
+INSERT INTO `dishes` VALUES (1,"Toastee Burder","Moose Phillips",6,600,"A burger on white toast",CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),(2,"Banh Mi Taco","Sally Stephens",2,300,"Cultural appropriation",CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),(3,"Plain Brown Rice","Claire McFarlane",3,120,"Just rice...",CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),(4,"Jerk Chicken Pizza","Alfonso Gutierrez",7,1200,"Jerked by a jerk",CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),(5,"Grandma's Peach Cobbler","Rory Sterling",3,800,"Ew, grandma's peach...",CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);
+UNLOCK TABLES;

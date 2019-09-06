@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    margin: 50px auto;
+    width: 350px;
+    border: 1px solid black;
+}
+
+h3{
+    margin: 20px 0px 0px 30px;
+    text-decoration: underline;
+}
+table{
+    margin-left: 20px;
+}
+td{
+    padding-left: 10px;
+    padding-top: 5px;
+    display: inline-block;
+}
+button{
+    margin-top: 10px;
+    margin-left:219px;
+    box-shadow: 2px 3px;
+    margin-bottom: 20px;
+}

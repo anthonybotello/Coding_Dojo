@@ -1,0 +1,11 @@
+C:\Users\Anthony\Desktop\C#\oop\object_construction\bin\Debug\netcoreapp2.2\object_construction.deps.json
+C:\Users\Anthony\Desktop\C#\oop\object_construction\bin\Debug\netcoreapp2.2\object_construction.runtimeconfig.json
+C:\Users\Anthony\Desktop\C#\oop\object_construction\bin\Debug\netcoreapp2.2\object_construction.runtimeconfig.dev.json
+C:\Users\Anthony\Desktop\C#\oop\object_construction\bin\Debug\netcoreapp2.2\object_construction.dll
+C:\Users\Anthony\Desktop\C#\oop\object_construction\bin\Debug\netcoreapp2.2\object_construction.pdb
+C:\Users\Anthony\Desktop\C#\oop\object_construction\obj\Debug\netcoreapp2.2\object_construction.csprojAssemblyReference.cache
+C:\Users\Anthony\Desktop\C#\oop\object_construction\obj\Debug\netcoreapp2.2\object_construction.csproj.CoreCompileInputs.cache
+C:\Users\Anthony\Desktop\C#\oop\object_construction\obj\Debug\netcoreapp2.2\object_construction.AssemblyInfoInputs.cache
+C:\Users\Anthony\Desktop\C#\oop\object_construction\obj\Debug\netcoreapp2.2\object_construction.AssemblyInfo.cs
+C:\Users\Anthony\Desktop\C#\oop\object_construction\obj\Debug\netcoreapp2.2\object_construction.dll
+C:\Users\Anthony\Desktop\C#\oop\object_construction\obj\Debug\netcoreapp2.2\object_construction.pdb

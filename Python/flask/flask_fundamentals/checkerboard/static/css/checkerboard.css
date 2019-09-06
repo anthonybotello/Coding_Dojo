@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.container{
+    margin: 0 auto;
+    width: {{ num_columns * 100 }}px;
+    height: {{ num_rows * 100 }}px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.container div:nth-child(2n+1) div:nth-child(2n+1), .container div:nth-child(2n) div:nth-child(2n){
+    height:100px;
+    width:100px;
+    display: inline-block;
+}
+.container div:nth-child(2n+1) div:nth-child(2n), .container div:nth-child(2n) div:nth-child(2n+1){
+    height:100px;
+    width:100px;
+    display: inline-block;
+}
+

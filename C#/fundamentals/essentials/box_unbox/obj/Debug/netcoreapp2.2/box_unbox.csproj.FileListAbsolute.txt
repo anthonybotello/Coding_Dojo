@@ -1,0 +1,11 @@
+C:\Users\Anthony\Desktop\C#\box_unbox\bin\Debug\netcoreapp2.2\box_unbox.deps.json
+C:\Users\Anthony\Desktop\C#\box_unbox\bin\Debug\netcoreapp2.2\box_unbox.runtimeconfig.json
+C:\Users\Anthony\Desktop\C#\box_unbox\bin\Debug\netcoreapp2.2\box_unbox.runtimeconfig.dev.json
+C:\Users\Anthony\Desktop\C#\box_unbox\bin\Debug\netcoreapp2.2\box_unbox.dll
+C:\Users\Anthony\Desktop\C#\box_unbox\bin\Debug\netcoreapp2.2\box_unbox.pdb
+C:\Users\Anthony\Desktop\C#\box_unbox\obj\Debug\netcoreapp2.2\box_unbox.csprojAssemblyReference.cache
+C:\Users\Anthony\Desktop\C#\box_unbox\obj\Debug\netcoreapp2.2\box_unbox.csproj.CoreCompileInputs.cache
+C:\Users\Anthony\Desktop\C#\box_unbox\obj\Debug\netcoreapp2.2\box_unbox.AssemblyInfoInputs.cache
+C:\Users\Anthony\Desktop\C#\box_unbox\obj\Debug\netcoreapp2.2\box_unbox.AssemblyInfo.cs
+C:\Users\Anthony\Desktop\C#\box_unbox\obj\Debug\netcoreapp2.2\box_unbox.dll
+C:\Users\Anthony\Desktop\C#\box_unbox\obj\Debug\netcoreapp2.2\box_unbox.pdb

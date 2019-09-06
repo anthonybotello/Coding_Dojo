@@ -1,0 +1,17 @@
+/* custom styling */
+.inl-blk{
+    display: inline-block;
+    vertical-align: top;
+}
+.icon-size{
+    font-size: 1.25rem;
+}
+ul li{
+    display: inline-block;
+    padding: 1px 0px;
+    text-align: center;
+}
+li:not(:first-child):before {
+    content: "|";
+    padding: 0 0px;
+}

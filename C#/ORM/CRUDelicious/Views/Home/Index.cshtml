@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="mx-auto mt-4">
+    <h1 class="text-center mb-4">Welcome to CRUDelicious</h1>
+    <h3 class="border-bottom border-dark d-inline pb-2">Check out some recent dishes!</h3>
+    <ul class="list-group mt-4">
+        @foreach(var dish in ViewBag.RecentDishes)
+        {
+            <li class="border-0 list-group-item py-0 mb-2">
+                <a href="@dish.id">@dish.Name</a> by @dish.Chef
+            </li>
+        }
+    </ul>
+    <a href="new" class="btn btn-primary mt-2 ml-3">Add a Dish</a>
+</div>

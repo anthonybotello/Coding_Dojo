@@ -1,0 +1,190 @@
+* {
+	vertical-align: baseline;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+    margin: 0;
+    list-style-type: 0;
+}
+
+.container{
+    width: 1000px;
+    background-color: #245076;
+    margin: 0px auto;
+}
+
+.header{
+    height: 110px;
+}
+.header img{
+    height:90px;
+    padding:15px 15px 0px 0px;
+    margin-left: 20px;
+}
+.header_right{
+    width: 290px;
+    height: 105px;
+    display:inline-block;
+    vertical-align: top;
+    margin-left: 320px;
+        
+}
+.header_right p{
+    font-size: 10pt;
+    text-align: center;
+    color: white;
+    margin: 10px 0px 5px;
+}
+.header_right p a{
+    color: gold;
+}
+.black_bar{
+    color: black;
+}
+.search{
+    width: 265px;
+    height:50px;
+    background-color: #444444;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px #1f1f1f;
+}
+.search input{
+    text-align: center;
+    margin: 15px 0px 15px 30px;
+}
+.search a{
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #245076;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 8pt;
+}
+
+.menu{
+    height: 45px;
+    width: 870px;
+    background-color: #407bad;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px #1f1f1f;
+    margin: 0px 0px 0px 53px;
+}
+.menu ul{
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+}
+.menu ul li{
+    text-align: center;
+    padding: 10px 25px;
+    display: inline-block;
+}
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16pt;
+}
+
+.nav_description ul{
+    display: inline-block;
+    list-style-position: inside;
+    color: gold;
+    text-align: center;
+    padding:0px;
+    margin: 40px 0px 0px 100px;
+}
+.nav_description ul li{
+    padding: 2px;
+}
+.nav_description ul li a{
+    color: white;
+}
+.description{
+    width: 570px;
+    height: 270px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin: 20px 0px 5px 50px;
+}
+.description p{
+    color: white;
+    font-size: 10pt;
+    margin-bottom: 10px;
+}
+.description ul{
+    color: gold;
+    font-size: 14pt;
+    font-style: italic;
+    list-style-type: none;
+    margin: 0px;
+}
+.description ul li{
+    padding: 4px;
+}
+.zen_of_python{
+    color: white;
+    font-style: normal;
+    font-size: 13pt;
+}
+
+.start_apps{
+    width:1000px;
+    height: 205px;
+    background-color: white;
+}
+.getting_started,.applications{
+    width:450px;
+    height: 190px;
+    padding-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 11pt;
+}
+.getting_started h3,.getting_started p,.applications h3,.applications p{
+    text-align: center;
+}
+.getting_started{
+    margin: 0px 0px 50px 50px;
+}
+.blue_bar{
+    width:420px;
+    height: 5px;
+    background-color:#73a7d5;
+}
+.content{
+    width:320px;
+    margin-left: 10px;
+}
+.getting_started ul{
+    margin-left: 40px;
+    text-align:center;
+}
+.applications ul{
+    margin-left: 35px;
+    text-align: center;
+}
+.blue_links{
+    color: #73a7d5;
+    text-decoration: none;
+}
+
+.foot_list{
+    margin: 40px 0px 20px 200px;
+}
+.foot_list li{
+    display: inline-block;
+    padding: 0px 25px 0px 25px;
+}
+.foot_links{
+    color: #7eb1de;
+    text-decoration: none;
+}
+.copyright{
+    text-align: center;
+    font-size: 8pt;
+    color: #7eb1de;
+    padding-bottom: 10px;
+}

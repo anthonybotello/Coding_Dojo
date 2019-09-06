@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*span classes*/
+.bluetext{
+    color: #22659e;
+}
+.redtext{
+    color: #d92620;
+}
+.lightbluetext{
+    color: #0099af;
+}
+.boldtext{
+    font-weight: bold;
+}
+.italictext{
+    font-style: italic;
+}
+/*end span classes*/
+
+.container{
+    width: 1000px;
+    background-image: linear-gradient(#e3e3e3,white,white);
+    margin: 0 auto;
+}
+
+.header{
+    width: 1000px;
+    height: 132px;
+    background-color: white;
+}
+.header img{
+    width: 90px;
+    margin-left: 10px;
+    vertical-align: top;
+}
+.header p{
+    color: #474747;
+    font-size: 30pt;
+    display: inline-block;
+    padding: 27px 0 10px 0;
+}
+.header h2{
+    height: 50px;
+    width: 970px;
+    font-size: 20pt;
+    color: white;
+    background-image: linear-gradient(#24669f,#5384ad,#24669f);
+    padding: 12px 0px 0px 30px;
+    margin: -20px 0px 0px 0px;
+}
+
+.mainleft{
+    width: 220px;
+    height: 600px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.lefttop{
+    width: 220px;
+    height: 175px;
+    border-bottom: 2px solid #b9b9b9;
+}
+.lefttop h4{
+    margin: 15px 0px 0px 5px;
+}
+.lefttop p{
+    font-weight: bold;
+    font-size: 9pt;
+    margin: 7px 0px 0px 5px;
+}
+.lefttop ul{
+    list-style-type: none;
+    margin: 25px 0px 0px 17px;
+}
+.lefttop ul li{
+    margin: 24px 0px;
+}
+.lefttop a{
+    width: 200px;
+    height: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #8e8e8e;
+}
+.topbutton{
+    padding: 10px 30px;
+    background-image: linear-gradient(#6399c4,#24679f)
+}
+.bottombuttom{
+    padding: 10px 21px;
+    background-image: linear-gradient(#eaae58,#eb7407)
+}
+.leftbottom{
+    width: 218px;
+    height: 300px;
+    background-image: url("ad_background.png");
+    margin: 25px 0px 0px 0px;
+    box-shadow: 2px 2px 2px #818181;
+}
+.leftbottom p{
+    color: white;
+    text-align: center;
+    font-size: 16pt;
+    padding-top: 15px;
+    margin: 0px 10px;
+}
+.leftbottom img{
+    width: 120px;
+    margin-left: 45px;
+}
+.leftbottom a{
+    width: 200px;
+    height: 20px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #282828;
+    display: block;
+    margin: 5px 0px 0px 9px;
+}
+.ninjabutton{
+    padding: 10px 0px;
+    background-image: linear-gradient(#7dd1df,#00c1df)
+}
+
+.mainright{
+    width: 736px;
+    height: 702px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 40px;
+}
+.dnshead{
+    width: 736px;
+    height: 80px;
+    border-bottom: 2px solid #b9b9b9;
+}
+.home{
+    width: 100px;
+    height: 80px;
+    display: inline-block;
+}
+.home img{
+    width: 25px;
+    margin-top: 10px;
+}
+.home h3{
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 2px;
+}
+.dnshead_right{
+    width: 200px;
+    height: 80px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 425px;
+}
+.dnshead_right img{
+    width: 50px;
+    margin-top: 15px;
+}
+.dnshead_right ul{
+    list-style-type: none;
+    text-align: center;
+    display: inline-block;
+}
+.smalltext{
+    color: #5a5a5a;
+    font-size: 7pt;
+}
+.phonenumber{
+    color: #00c0df;
+    font-size: 19pt;
+    font-weight: bold;
+}
+
+.clients{
+    width: 736px;
+    height: 275px;
+    margin-top: 8px;
+}
+.clients ul{
+    margin: 3px 5px 0px 40px;
+}
+.clients img{
+    width: 300px;
+    margin: 6px 0px 0px 210px;
+}
+
+.whathappens{
+    width: 736px;
+    height: 165px;
+    margin-top: 8px;
+}
+.whathappens ol{
+    margin: 5px 0px 0px 40px;
+}
+
+.big3{
+    width: 724px;
+    height: 140px;
+    border-top: 6px solid #0085e0;
+    border-left: 6px solid #0085e0;
+    border-right: 6px solid #0085e0;
+    margin-top: 20px;
+}
+.big3 img{
+    height: 120px;
+    margin: 10px 0px 0px 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+.big3 ul{
+    display: inline-block;
+    margin: 5px 0px 0px 10px;
+    list-style-type: none;
+    vertical-align: top;
+}
+.big3 ul li{
+    width: 565px;
+    margin: 5px 0px 0px 0px;
+}
+.largebluetext{
+    color: #22659e;
+    font-size: 16pt;
+    font-weight: bold;
+}
+.big3 a{
+    text-decoration: none;
+}

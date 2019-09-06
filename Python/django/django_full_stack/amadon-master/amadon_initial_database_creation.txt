@@ -1,0 +1,5 @@
+Product.objects.create(description="Dog",price="200.99")
+Product.objects.create(description="Cat",price="12.00")
+Product.objects.create(description="Oliphaunt",price="999.99")
+Product.objects.create(description="Loch Ness Monster",price="3.50")
+

@@ -1,0 +1,45 @@
+@{
+    User user = ViewBag.User;
+    ViewData["Title"] = @user.FirstName + "'s Account";
+}
+@model Transaction
+
+<h1>Welcome, @user.FirstName!</h1>
+
+<h4 class="d-inline-block ml-2 align-middle">Current Balance:</h4>
+<h5 class="d-inline-block py-1 px-2 border border-dark align-middle">$@String.Format("{0:0.00}",@user.AccountBalance)</h5>
+
+<table class="table table-striped w-50 h-50 overflow-auto">
+    <thead>
+        <tr>
+            <th class="col-md-1">Amount</th>
+            <th class="col-md-2">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Transaction trans in user.UserTransactions)
+        {
+            <tr>
+                @if(trans.Amount < 0)
+                {
+                    <td class="text-danger">@String.Format("{0:0.00}",@trans.Amount)</td>
+                }
+                else
+                {
+                    <td>@String.Format("{0:0.00}",@trans.Amount)</td>
+                }
+                <td>@trans.created_at.ToString("dd MMM yyyy h:mm tt")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form asp-controller="Transaction" asp-action="AddTransaction" class="form-inline" method="post">
+  <div class="form-group row mx-2 mb-2">
+    <label asp-for="Amount" class="mr-2"></label>
+    <input asp-for="Amount" class="form-control col-sm-3 mr-2">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  <div class="invalid-feedback d-block ml-2"><span asp-validation-for="Amount"></span></div>
+    <input type="hidden" asp-for="UserId" value="@user.UserId">
+</form>

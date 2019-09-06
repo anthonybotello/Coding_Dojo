@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Course comments</title>
+    
+    {% load static %}
+    <link rel='stylesheet' href="{% static 'courses_app/css/bootstrap.css' %}">
+    <link rel='stylesheet' href="{% static 'courses_app/css/style.css' %}">
+</head>
+
+<body>
+<div class="container">
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-8 blog-main">
+                <form action="{% url 'courses:add_comment' %}" method='POST'>
+                {% csrf_token %}
+                    <input type="hidden" name='course_id' value="{{course.id}}">
+                    <div class="form-group mt-1">
+                    <label for="exampleFormControlTextarea1"><h3 class="font-italic mt-2 mb-0 pl-1">Add a comment</h3></label>
+                    <textarea class="form-control pd" id="exampleFormControlTextarea1" rows="3" name='comment'></textarea>
+                    <div class="text-right">
+                        <button class="btn btn-md btn-primary mt-1" type="submit">Add comment</button>
+                        <a class="btn btn-md btn-light border border-secondary mt-1" href="{% url 'courses:home' %}">Back to courses</a>
+                    </div>
+                    </div>
+            </form>
+
+        <div class="blog-post">
+        {% for comment in course.comments.all %}
+        <div class="invalid-feedback p-0 m-0" id="comment_errors">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+            <p class="blog-post-meta m-0 p-0">{{comment.created_at}}</p>
+            <p class="ml-3">{{comment.comment}}</p>
+            <hr>
+        {% endfor %}
+        </div><!-- /.blog-post -->
+    </div><!-- /.blog-main -->
+    </div><!-- /.row -->
+</main><!-- /.container -->
+</body>
+</html>

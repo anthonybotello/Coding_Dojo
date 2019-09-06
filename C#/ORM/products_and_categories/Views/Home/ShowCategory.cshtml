@@ -1,0 +1,44 @@
+@{
+    @model Association
+    ViewData["Title"] = ViewBag.Category.Name;
+}
+
+<ul class="nav nav-tabs justify-content-center mt-3">
+    <li class="nav-item">
+        <h1><a href="/products" class="nav-link">Products</a></h1>
+    </li>
+    <li class="nav-item">
+        <h1><a href="/categories" class="nav-link">Categories</a></h1>
+    </li>
+</ul>
+
+<h1 class="text-center mt-5">@ViewBag.Category.Name</h1>
+
+<div class="row mt-5 justify-content-center">
+    <div class="col-4">
+        <h4>Products: </h4>
+        <ul class="list-group mt-3">
+            @foreach(Association ass in ViewBag.Category.Products)
+            {
+                <li class="list-group-item border-0 pt-0"><a href="/products/@ass.Product.ProductId">@ass.Product.Name</a></li>
+            }
+        </ul>
+        
+    </div>
+    <div class="col-3">
+        <h6>Add Product:</h6>
+        <form asp-Controller="Home" asp-action="AddCategoryProduct" method="post">
+            <input type="hidden" asp-for="CategoryId" value="@ViewBag.Category.CategoryId">
+            <div class="form-group">
+                <select class="form-control" asp-for="ProductId">
+                    <option value="" selected disabled>Products</option>
+                    @foreach(Product prod in ViewBag.Nots)
+                    {
+                        <option value="@prod.ProductId">@prod.Name</option>
+                    }
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+</div>

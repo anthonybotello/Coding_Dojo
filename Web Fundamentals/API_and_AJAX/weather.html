@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Forecast</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"\>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+    <script>
+        $(document).ready(function(){
+            $('form').submit(function(){
+                const loc = $('#search')[0].value;
+                const url = `http://api.openweathermap.org/data/2.5/weather?q=${loc}&&appid=0bafe1fb01cd2072bfa966ed18c14451`
+                $.get(url,function(data){
+                    console.log(data);
+                    $('#location').text()//add location from JSON
+                    $('temperature').text(`Temperature: ${} &#176;F`);//add temperature from JSON
+                },"json");
+                return false;
+            })
+        });
+    </script>
+
+</head>
+<body>
+    <div class="container mt-3">
+        <nav class="navbar navbar-expand-lg mb-4">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline mr-auto">
+                    <input class="form-control" type="text" placeholder="Search" id="search">
+                    <button class="btn btn-primary btn-rounded btn my-0 ml-sm-2" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    
+        <h1 id="location" class="ml-3"></h1>
+        <h3 id="temperature" class="ml-3 mt-3"></h3>
+    </div>
+</body>
+</html>

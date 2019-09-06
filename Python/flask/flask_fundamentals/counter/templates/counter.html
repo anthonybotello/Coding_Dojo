@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            text-align: center;
+        }
+        .container{
+            margin:100px auto;
+        }
+        form{
+            display: inline-block;
+        }
+        h1{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {% if session['views'] == 1 %}
+            <h1>Page Viewed</h1>
+            <p>{{ session['views'] }} time.</p>
+        {% endif %}
+
+        {% if session['views'] > 1 %}
+            <h1>Page Viewed</h1>
+            <p>{{ session['views'] }} times.</p>
+        {% endif %}
+        <form action="/destroy_session">
+            <button>Clear Cookies</button>
+        </form>
+
+        <h1>Counter</h1>
+        <p>{{ session['count'] }}</p>
+
+        <form action="/plus_two">
+            <button>Increase counter by 2!</button>
+        </form>
+        <form action="/reset">
+            <button>Reset Counter</button>
+        </form>
+        <form action="/custom_increment" method='POST'>
+            <input type="number" name="number" value='1'>
+            <button type="submit">Increase Count</button>
+        </form>
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My Registration Form</title>
+    </head>
+    <body>
+        <h1>My Registration Form</h1>
+        <form>
+            <label>
+                First Name: <input type="text" name="first_name">
+            </label><br>
+            <br>
+            <label>
+                Last Name: <input type="text" name="last_name">
+            </label><br>
+            <br>
+            <label>
+                Email: <input type="text" name="email">
+            </label><br>
+            <br>
+            <label>
+                Password: <input type="password" name="password">
+            </label><br>
+            <br>
+            <label>
+                PW Confirm: <input type="password" name="password_confirmation">
+            </label><br>
+            <br>
+            <label>
+                Birthday: <input type="date" name="birthday">
+            </label><br>
+            <br>
+            <label>
+                <input type="radio" name="gender" value="Male"> Male 
+            </label>
+            <label>
+                <input type="radio" name="gender" value="Female"> Female 
+            </label>
+            <label>
+                <input type="radio" name="gender" value="Other"> Other 
+            </label><br>
+            <br>
+            <label>
+                A short description about yourself:<br> <textarea name="description"></textarea>
+            </label><br>
+            <br>
+            <label>
+                Favorite language: 
+                <select name="favorite_language">
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="c++">C++</option>
+                    <option value="other">Other</option>
+                </select>
+            </label><br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

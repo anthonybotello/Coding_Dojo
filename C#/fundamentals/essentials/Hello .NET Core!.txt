@@ -1,0 +1,53 @@
+Anthony@Laptop MINGW64 ~/Desktop
+$ dotnet --version
+2.2.107
+
+Anthony@Laptop MINGW64 ~/Desktop
+$ mkdir new_project
+
+Anthony@Laptop MINGW64 ~/Desktop
+$ cd new_project
+
+Anthony@Laptop MINGW64 ~/Desktop/new_project
+$ dotnet new console
+The template "Console Application" was created successfully.
+
+Processing post-creation actions...
+Running 'dotnet restore' on C:\Users\Anthony\Desktop\new_project\new_project.csproj...
+  Restoring packages for C:\Users\Anthony\Desktop\new_project\new_project.csproj...
+  Generating MSBuild file C:\Users\Anthony\Desktop\new_project\obj\new_project.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\Anthony\Desktop\new_project\obj\new_project.csproj.nuget.g.targets.
+  Restore completed in 197.67 ms for C:\Users\Anthony\Desktop\new_project\new_project.csproj.
+
+Restore succeeded.
+
+
+Anthony@Laptop MINGW64 ~/Desktop/new_project
+$ ls
+new_project.csproj  obj/  Program.cs
+
+Anthony@Laptop MINGW64 ~/Desktop/new_project
+$ dotnet build
+Microsoft (R) Build Engine version 15.9.20+g88f5fadfbe for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restore completed in 36.14 ms for C:\Users\Anthony\Desktop\new_project\new_project.csproj.
+  new_project -> C:\Users\Anthony\Desktop\new_project\bin\Debug\netcoreapp2.2\new_project.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.19
+
+Anthony@Laptop MINGW64 ~/Desktop/new_project
+$ dotnet ./bin/Debug/netcoreapp2.2/new_project.d
+new_project.deps.json  new_project.dll
+
+Anthony@Laptop MINGW64 ~/Desktop/new_project
+$ dotnet ./bin/Debug/netcoreapp2.2/new_project.dll
+Hello World!
+
+Anthony@Laptop MINGW64 ~/Desktop/new_project
+$ dotnet run
+Hello World!

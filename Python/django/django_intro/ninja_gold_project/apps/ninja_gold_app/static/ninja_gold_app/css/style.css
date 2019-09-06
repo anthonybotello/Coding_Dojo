@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 20px auto;
+    height: 400px;
+    width: 850px;
+}
+table{
+    margin: 10px;
+}
+table p{
+    margin-left: 5px;
+}
+ul{
+    margin-left: 10px;
+}
+ul li{
+    display: inline-block;
+}
+.building{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    text-align: center;
+}
+.building h3{
+    margin-top: 40px;
+}
+.building p{
+    margin-top: 10px;
+}
+.building form{
+    margin-top: 20px;
+}
+.building form input[type=submit]{
+    padding: 8px 16px;
+    box-shadow: 2px 2px;
+    font-size: 14pt;
+}
+.activity{
+    margin: 10px 0px 0px 10px;
+}
+.activity_log p:last-child{
+    margin-bottom: 20px;
+}
+.activity_log{
+    height:100px;
+    width: 825px;
+    border: 2px solid black;
+    margin-left: 10px;
+    overflow: auto;
+}
+.plus_gold{
+    color: green;
+}
+.minus_gold{
+    color: red;
+}
+.restart{
+    margin: 10px 0 0 10px;
+}

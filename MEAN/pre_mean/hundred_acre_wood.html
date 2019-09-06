@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Traveling in Hundred Acre Wood</title>
+
+</head>
+<body>
+    <script>
+        function Character(character,greeting,north=null,east=null,south=null,west=null)
+        {
+            this.Character = character;
+            this.North = north;
+            this.East = east;
+            this.South = south;
+            this.West = west;
+            this.Greet = function(){console.log(this.Character + ": " + greeting)};
+        }
+
+        var pooh = new Character("Winnie the Pooh","Oh bother.");
+        var tigger = new Character("Tigger","The wonderful thing about Tiggers is Tiggers are wonderful things!");
+        var piglet = new Character("Piglet","Oh d-d-d-d-dear! I wasn't expecting company!");
+        var bees = new Character("Bees","Bzzz bzzz, fuccboi!");
+        var owl = new Character("Owl","Hoot hoot, mother f*****!");
+        var chris = new Character("Christopher Robin","Peter Pan ain't got shit on me.");
+        var rabbit = new Character("Rabbit","You wanna buy some \"carrots\"?");
+        var gopher = new Character("Gopher","Just 'cause I'm a gopher don't mean I won't drop a body.");
+        var kanga = new Character("Kanga","Hey, big boy. Wanna climb in my pouch?");
+        var eeyore = new Character("Eeyore","Have you seen my tail? I can't hang myself without my tail...");
+        var heffas = new Character("Heffalumps","East HAW Heffalumpz represent. Miss me with that Woozle shit.");
+
+        tigger.North = pooh;
+
+        pooh.North = chris;
+        pooh.East = bees;
+        pooh.South = tigger;
+        pooh.West = piglet;
+
+        piglet.North = owl;
+        piglet.East = pooh;
+
+        bees.North = rabbit;
+        bees.West = pooh;
+
+        chris.North = kanga;
+        chris.East = rabbit;
+        chris.South = pooh;
+        chris.West = owl;
+
+        owl.East = chris;
+        owl.South = piglet;
+
+        rabbit.East = gopher;
+        rabbit.South = bees;
+        rabbit.West = chris;
+
+        gopher.West = rabbit;
+
+        kanga.North = eeyore;
+        kanga.South = chris;
+
+        eeyore.East = heffas;
+        eeyore.South = kanga;
+
+        heffas.West = eeyore;
+
+        function Player(location)
+        {
+            this.Location = location;
+            this.Honey = false;
+        }
+
+        var player = new Player(tigger);
+
+        function move(direction)
+        {
+            var old_loc = player.Location;
+            if (direction === "north")
+            {
+                player.Location = player.Location.North;
+            }
+            if (direction === "east")
+            {
+                player.Location = player.Location.East;
+            }
+            if (direction === "south")
+            {
+                player.Location = player.Location.South;
+            }
+            if (direction === "west")
+            {
+                player.Location = player.Location.West;
+            }
+            if(player.Location === null)
+            {
+                player.Location = old_loc;
+                return "There is nothing in that direction!";
+            }
+            else
+            {
+                console.log("You are now at " + player.Location.Character + "'s house.");
+                return player.Location.Greet();
+            }
+        }
+
+        function pickUp()
+        {
+            if (player.Location === bees)
+            {
+                player.Honey = true;
+                return "Stole some honey from the bees!";
+            }
+            else
+            {
+                return "There is no honey here!";
+            }
+        }
+
+        var locations = [tigger,pooh,piglet,owl,chris,rabbit,gopher,kanga,eeyore,heffas];
+
+        var destination;
+
+        function mission()
+        {
+            destination = locations[Math.floor(Math.random() * 10)];
+            return "Steal some honey from the bees and drop it off at " + destination.Character + "'s house.";    
+        }
+
+        function drop()
+        {
+            if (player.Location === destination)
+            {
+                if (player.Honey)
+                {
+                    player.Honey = false;
+                    return "I guess you win.";
+                }
+                else
+                {
+                    return "You don't have any honey."
+                }
+            }
+            else
+            {
+                return "This isn't the right destination.";
+            }
+
+        }
+    </script>
+</body>
+</html>

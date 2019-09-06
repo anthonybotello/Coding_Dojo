@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    @model IndexViewModel
+}
+
+
+<div class="text-center">
+    @*
+    <partial name="RegisterPartial"/>
+    <partial name="LoginPartial"/>
+    *@
+
+    <form asp-controller="Home" asp-action="Register" class="form-signin d-inline-block align-middle mr-5" method="post" novalidate>
+        <h1 class="h3 mb-3 font-weight-normal text-center">Registration</h1>
+        
+        <p style="color:red"><span asp-validation-for="NewRegistration.FirstName"></span></p>
+        <p style="color:red"><span asp-validation-for="NewRegistration.LastName"></span></p>
+        <p style="color:red"><span asp-validation-for="NewRegistration.RegistrationEmail"></span></p>
+        <p style="color:red"><span asp-validation-for="NewRegistration.RegistrationPassword"></span></p>
+        <p style="color:red"><span asp-validation-for="NewRegistration.ConfirmPassword"></span></p>
+
+        <input asp-for="NewRegistration.FirstName" class="form-control" placeholder="First Name" required>
+        
+        <input asp-for="NewRegistration.LastName" class="form-control" placeholder="Last Name" required>
+
+        <input asp-for="NewRegistration.RegistrationEmail" class="form-control" placeholder="Email Address" required>
+        
+        <input asp-for="NewRegistration.RegistrationPassword" class="form-control" placeholder="Password" required>
+        
+        <input asp-for="NewRegistration.ConfirmPassword" class="form-control" placeholder="Confirm Password" required>
+        
+        <button class="btn btn-lg btn-primary btn-block" id = 'regsubmit' type="submit">Register</button>
+    </form>
+
+    <form asp-controller="Home" asp-action="Login" class="form-signin d-inline-block align-middle ml-5" method="post" novalidate>
+        <h1 class="h3 mb-3 font-weight-normal text-center">Login</h1>
+        
+        <p style="color:red"><span asp-validation-for="UserLogin.LoginEmail"></span></p>
+        <p style="color:red"><span asp-validation-for="UserLogin.LoginPassword"></span></p>
+
+        <input asp-for="UserLogin.LoginEmail" class="form-control" placeholder="Email address" required>
+
+        <input asp-for="UserLogin.LoginPassword" class="form-control" placeholder="Password" required>
+        
+        <button class="btn btn-lg btn-primary btn-block" id='loginsubmit' type="submit">Log In</button>
+    </form>
+
+</div>
+
+

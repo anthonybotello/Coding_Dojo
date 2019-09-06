@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    @model form_submission.Models.User
+}
+<form asp-controller="Home" asp-action="Register" method="post">
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <p style="color:red"><span asp-validation-for="FirstName"></span></p>
+        <input class="form-control" asp-for="FirstName">
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <p style="color: red"><span asp-validation-for="LastName"></span></p>
+        <input class="form-control" asp-for="LastName">
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <p style="color:red"><span asp-validation-for="Email"></span></p>
+        <input class="form-control" asp-for="Email">
+    </div>
+    <div class="form-group">
+        <label asp-for="Age"></label>
+        <p style="color:red"><span asp-validation-for="Age"></span></p>
+        <input class="form-control" asp-for="Age">
+    </div>
+    <div class="form-group">
+        <label asp-for="Birthday"></label>
+        <p style="color:red"><span asp-validation-for="Birthday"></span></p>
+        <input class="form-control" asp-for="Birthday">
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <p style="color:red"><span asp-validation-for="Password"></span></p>
+        <input class="form-control" asp-for="Password">
+    </div>
+    <input value="Submit" type="submit" class="btn btn-primary">
+</form>
+

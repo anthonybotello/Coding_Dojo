@@ -1,0 +1,74 @@
+@{
+    @model IndexViewModel
+    ViewData["Title"] = "CodingDojo Wall";
+}
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">CodingDojo Wall</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" href="#">Welcome, @ViewBag.User.FirstName!</a>
+    <a class="p-2 text-dark" href="#"></a>
+  </nav>
+  <a class="btn btn-outline-primary" href="logout">Log Out</a>
+</div>
+
+
+
+<h4>Post a Message</h4>
+<form asp-controller="Home" asp-action="AddMessage" method="post" class="pb-3 border-bottom border-secondary">
+    <input type="hidden" asp-for="NewMessage.UserId" value="@ViewBag.User.UserId">
+        <textarea asp-for="NewMessage.Text" rows="3" class="form-control"></textarea>
+        <div class="invalid-feedback d-block"><span asp-validation-for="NewMessage.Text"></span></div>
+    <div class="text-right mb-2">
+        <button type="submit" class="btn btn-primary">Post Message</button>
+    </div>
+</form>
+
+
+<div class="list-group mt-5">
+    @foreach(Message msg in ViewBag.Messages)
+    {
+        <blockquote class="list-group-item list-group-item-action flex-column align-items-start" disabled>
+            <p class="mb-1 text-justify lead">@msg.Text</p>
+            <div class="d-flex w-100 justify-content-between mt-2">
+                <small class="text-dark"><strong>@msg.Creator.FirstName @msg.Creator.LastName</strong> - @msg.CreatedAt.ToString("MMMM dd, yyyy | h:mm tt")</small>
+            @{
+                TimeSpan msgInterval = DateTime.Now - msg.CreatedAt;
+            }    
+            @if(msg.UserId == ViewBag.User.UserId && msgInterval.TotalMinutes < 30.00)
+           {
+                <small><a href="delete/message/@msg.MessageId" class="text-danger">Delete</a></small>
+           }
+           </div>
+        </blockquote>
+        @foreach(Comment cmt in msg.Comments.OrderByDescending(c=>c.CommentId))
+        {
+            <h6 class="list-group-item list-group-item-action flex-column align-items-start pl-5 pb-4" disabled>
+                <p class="mb-1 text-justify">@cmt.Text</p>
+                <div class="d-flex w-100 justify-content-between mt-2">
+                    <small class="text-dark"><strong>@cmt.User.FirstName @cmt.User.LastName</strong> - @cmt.CreatedAt.ToString("MMMM dd, yyyy | h:mm tt")</small>
+                @{
+                    TimeSpan cmtInterval = DateTime.Now - cmt.CreatedAt;
+                }
+                @if(cmt.UserId == ViewBag.User.UserId && cmtInterval.TotalMinutes < 30.00)
+                {
+                    <small><a href="delete/comment/@cmt.CommentId" class="text-danger">Delete</a></small>
+                }
+                </div>
+            </h6>
+        }
+        <form asp-controller="Home" asp-action="AddComment" method="post">
+            <input type="hidden" asp-for="NewComment.UserId" value="@ViewBag.User.UserId">
+            <input type="hidden" asp-for="NewComment.MessageId" value="@msg.MessageId">
+            <textarea asp-for="NewComment.Text" rows="3" class="form-control"></textarea>
+            <div class="invalid-feedback d-block"><span asp-validation-for="NewComment.Text"></span></div>
+            <div class="text-right mb-2">
+                <button type="submit" class="btn btn-success">Post Comment</button>
+            </div>
+        </form>
+    }
+</div>
+
+
+
+  

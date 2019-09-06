@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "List<User>";
+    ViewData["Headline"] = "Here are some Users!";
+}
+@model List<User>;
+
+<ul class="list-group border border-dark w-25 mx-auto">
+@foreach(User user in @Model)
+{
+    <li class="list-group-item border-0">@user.FirstName @user.LastName</li>
+}
+</ul>

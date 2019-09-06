@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Dojo Survey Index";
+    @model dojo_survey.Models.Survey
+}
+
+<h2 class="mb-3">Dojo Survey</h2>
+<form asp-controller="Home" asp-action="result" method="post" class="ml-3">
+    <div class="form-group row w-25">
+        <input asp-for="Name" class="form-control">
+        <p style="color:red"><span asp-validation-for="Name"></span></p>
+    </div>
+    <div class="form-group row w-25">
+        <select asp-for="Location" class="form-control">
+            <option selected disabled>Location</option>
+            <option value="Seattle">Seattle</option>
+            <option value="Mordor">Mordor</option>
+            <option value="Dagobah">Dagobah</option>
+            <option value="Chick-fil-A">Chick-fil-A</option>
+        </select>
+        <p style="color:red"><span asp-validation-for="Location"></span></p>
+    </div>
+    <div class="form-group row w-25">
+        <select asp-for="Language" class="form-control">
+            <option selected disabled>Language</option>
+            <option value="Python">Python</option>
+            <option value="C#">C#</option>
+            <option value="English">English</option>
+            <option value="Braille">Braille</option>
+        </select>
+        <p style="color:red"><span asp-validation-for="Language"></span></p>
+    </div>
+    <div class="form-group row">
+        <textarea class="form-control w-25" asp-for="Comment" rows="3" placeholder="Comment (optional)"></textarea>
+    </div>
+    <p style="color:red"><span asp-validation-for="Comment"></span></p>
+    <button type="submit" class="btn btn-primary mb-2" style="margin-left:11rem">Submit</button>
+</form>

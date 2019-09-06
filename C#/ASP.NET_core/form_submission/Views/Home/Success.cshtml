@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Success";
+    @model form_submission.Models.User
+}
+<h1 class="text-center mt-5 mx-auto">Successfully Registered!</h1>
+<ul>
+    <li>@Model.FirstName</li>
+    <li>@Model.LastName</li>
+    <li>@Model.Age</li>
+    <li>@Model.Birthday</li>
+    <li>@Model.Email</li>
+    <li>@Model.Password</li>
+</ul>

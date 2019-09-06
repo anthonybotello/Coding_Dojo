@@ -1,0 +1,18 @@
+@{
+    @model Dish
+    ViewData["Title"] = @Model.Name;
+}
+<div class="mx-auto mt-4">
+    <h5><a href="/">Home</a></h5>
+    <div class="pb-4 border-bottom border-dark">
+        <h1 class="text-center">@Model.Name</h1>
+        <h3 class="text-center">@Model.Chef</h3>
+    </div>
+    <p class="mt-3">@Model.Description</p>
+    <p class="mt-3"><h5>Calories: <span class="text-muted">@Model.Calories</span></h5></p>
+    <p><h5>Tastiness: <span class="text-muted">@Model.Tastiness</span></h5></p>
+    <div class="mt-4">
+        <a href="delete/@Model.id" class="btn btn-danger mr-2">Delete</a>
+        <a href="edit/@Model.id" class="btn btn-light border border-dark">Edit</a>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Index</title>
+    <link rel="stylesheet" href="~/css/bootstrap.css"/>
+</head>
+
+<body>
+    <div class='container mt-5'>
+       @{
+           string[] foods = new string[]
+           {
+               "Apple Pie",
+               "Burritos",
+               "Clams Casino",
+               "Donuts"
+           };
+       }
+
+        <h1>Here are some delicious foods!</h1>
+        <ul class="list-group">
+
+        
+        @foreach(string food in foods)
+        {
+            @if(food[0].ToString().ToLower() == "c")
+            {
+                <li class="list-group-item border-0" style="color:red">@food</li>
+            }
+            else
+            {
+                <li class="list-group-item border-0">@food</li>
+            }
+        }
+       </ul>
+    </div>
+</body>
+</html>
