@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Wars Wiki</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"\>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script>
+        $(document).ready(function(){
+            var page = 1;
+            var type = "";
+            function buildInfo(type,page){
+                $.get(`/${type}/${page}`,(data) => {
+                    var html_str = "";
+                    data.results.forEach(x => {
+                        html_str += `
+                <li class="list-group-item border-0 mb-0 pb-0">${x.name}</li>`
+                    });
+                    $('#list').html(html_str);
+                    if(data.next != null){
+                        $('#next').text('Next 10');
+                    }
+                    else{
+                        $('#next').text('');
+                    }
+                    if(data.previous != null){
+                        $('#previous').text('Previous 10');
+                    }
+                    else{
+                        $('#prev').text('');
+                    }
+                    $('#all').text(`Get all ${data.count} ${type}`).attr("swinfo",`${type}`);
+                },'json');
+            };
+
+            // function getAll(type){
+            //     let pg = 1;
+            //     var array = [];
+            //     if (type === "planets"){
+            //         while (pg <= 7){
+            //             $.get(`/planets/${pg}`,(data) => {
+            //                 data.results.forEach(x => {
+            //                     array.push(x.name);
+            //                 });
+            //             },'json');
+            //             pg++;
+            //         }
+            //     }
+            //     console.log(array.length);
+            // }
+            //FIGURE OUT LATER
+
+            $('#ppl-btn').click(() => {
+                type = "people";
+                $('#ppl-btn').removeClass('btn-secondary').addClass('btn-primary');
+                $('#plt-btn').removeClass('btn-primary').addClass('btn-secondary');
+                page = 1;
+                buildInfo("people",page);
+            });
+
+            $('#plt-btn').click(() => {
+                type = "planets";
+                $('#plt-btn').removeClass('btn-secondary').addClass('btn-primary');
+                $('#ppl-btn').removeClass('btn-primary').addClass('btn-secondary');
+                page = 1;
+                buildInfo("planets",page);
+            });
+
+            $('#next').click(() =>{
+                page++;
+                buildInfo(type,page);
+            });
+            $('#previous').click(() =>{
+                page--;
+                buildInfo(type,page);
+            });
+            $('#all').click(() => {
+                getAll('planets');
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="text-center mb-3">
+            
+            <h3 class="mt-2">What would you like to know more about?</h3>
+            
+            <button class="btn btn-secondary" id="ppl-btn">People</button>
+            <button class="btn btn-secondary" id="plt-btn">Planets</button>
+        </div>
+    
+        <div class="w-50 mx-auto mb-1">
+            <ul class="list-group border border-dark pb-2" id="list">
+            </ul>
+        </div>
+
+        <div class="mx-auto mb-3">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" id="previous"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="all"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="next"></a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</body>
+</html>
