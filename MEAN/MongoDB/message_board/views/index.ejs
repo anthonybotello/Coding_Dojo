@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"\>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Dojo Message Board</h1>
+            <hr>
+        </header>
+
+        <form action="/messages" method="post">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" name="name" class="form-control" aria-describedby="nameErrors" placeholder="Enter name">
+                    <small id="nameErrors" class="form-text invalid-feedback d-block mb-2 ml-1"><%= messages.message_name %></small>
+                </div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                <textarea rows="3" name="content" class="form-control" aria-describedby="messageErrors" placeholder="Enter message"></textarea>
+                <small id="messageErrors" class="form-text invalid-feedback d-block mb-2 ml-1"><%= messages.message_content %></small>
+                </div>
+                <div class="col"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Message</button>
+        </form>
+
+        <% for (var msg of msgs){ %>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title"><%= msg.name %></h5>
+                <p class="card-text"><%= msg.content %></p>
+            </div>
+            <ul class="list-group ml-5">
+                <% for (var cmt of msg.comments){ %>
+                <li class="list-group-item">
+                        <h5 class="card-title"><%= cmt.name %></h5>
+                        <p class="card-text"><%= cmt.content %></p>
+                </li>
+                <% } %>
+                <li class="list-group-item">
+                    <form action="/comments" method="post">
+                        <input type="hidden" name="messageid" value="<%= msg._id %>">
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" name="name" class="form-control" aria-describedby="nameErrors" placeholder="Enter name">
+                                <small id="nameErrors" class="form-text invalid-feedback d-block mb-2 ml-1"><%= messages.comment_name %></small>
+                            </div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                            <textarea rows="3" name="content" class="form-control" aria-describedby="commentErrors" placeholder="Enter comment"></textarea>
+                            <small id="commentErrors" class="form-text invalid-feedback d-block mb-2 ml-1"><%= messages.comment_content %></small>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Add Comment</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <% } %>
+
+    </div>
+</body>
+</html>
