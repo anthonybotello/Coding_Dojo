@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= gator.name %>'s Info</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"\>
+
+</head>
+<body>
+    <div class="container mt-3">
+            <a href="/">Home</a>
+        <h1 class="display-4">Gator Info</h1>
+        <form action="/gators/<%= gator._id %>" method="post">
+            <div class="form-group w-25">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" class="form-control" aria-describedby="invalidName" value="<%= gator.name %>">
+                <small id="invalidName" class="form-text invalid-feedback d-block"><%= messages.name %></small>
+            </div>
+            <div class="form-group w-25">
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age" class="form-control" aria-describedby="invalidAge" value="<%= gator.age %>">
+                <small id="invalidAge" class="form-text invalid-feedback d-block"><%= messages.age %></small>
+            </div>
+            <div class="form-group w-25">
+                <label for="length">Length (ft):</label>
+                <input type="number" name="length" id="length" class="form-control" aria-describedby="invalidLength" value="<%= gator.length %>">
+                <small id="invalidLength" class="form-text invalid-feedback d-block"><%= messages.length %></small>
+            </div>
+            <div class="form-group w-25">
+                <label for="weight">Weight (lbs):</label>
+                <input type="number" name="weight" id="weight" class="form-control" aria-describedby="invalidWeight" value="<%= gator.weight %>">
+                <small id="invalidWeight" class="form-text invalid-feedback d-block"><%= messages.weight %></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Edit Gator</button>
+        </form>
+    </div>
+</body>
+</html>
