@@ -1,9 +1,6 @@
 const Task = require('./models');
 
 module.exports = {
-    index: (req,res) => {
-        res.redirect('/tasks');
-    },
     tasks: (req,res) => {
         Task.find()
             .then(tasks => res.json(tasks))
