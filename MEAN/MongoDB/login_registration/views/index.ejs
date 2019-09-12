@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login & Registration</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"\>
+
+</head>
+<body>
+    <div>
+        <h1 style="color:red"><%= messages.wrong_pw %></h1>
+        <h3>Login</h3>
+        <form method='post' action='/sessions'>
+            Email:
+            <input type='text' name='email'>
+            Password:
+            <input type='password' name='password'>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div>
+        <h3>Registration</h3>
+        <form method='post' action='/users'>
+            First Name:
+            <input type='text' name='first_name'>
+            Last Name:
+            <input type='text' name='last_name'>
+            Email:
+            <input type='email' name='email'>
+            Password:
+            <input type='password' name='password'>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+        
+</body>
+</html>
