@@ -1,0 +1,11 @@
+<div  style="text-align: center;border:1px solid black;text-align:center;width:15rem;margin-top:10px;display:inline-block;">
+    <form (submit)="editTask($event,taskToShow._id)" style="margin-bottom:10px;">
+        <h3>Edit Task</h3>
+        Title:
+        <input type="text" name="taskToShow.title" [(ngModel)]="taskToShow.title" />
+        Description:
+        <input type="text" name="taskToShow.description" [(ngModel)]="taskToShow.description" />
+        <input type="submit" value="Edit" />
+        <button (click)="hideEdit($event)">Hide</button>
+    </form>
+</div>
