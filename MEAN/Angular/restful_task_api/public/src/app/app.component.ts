@@ -14,12 +14,10 @@ export class AppComponent implements OnInit {
   constructor(private _httpService: HttpService){}
 
   ngOnInit(){
-    this.getTasksFromService();
-    this.getOneTaskFromService("5d7ae5c32e143118b7ec4eff");
   }
 
   tasks: any;
-  getTasksFromService(){
+  getTasksFromService() {
     let observ = this._httpService.getTasks();
     observ.subscribe(data => {
         console.log("Yep, yep, yep!",data);
@@ -28,11 +26,25 @@ export class AppComponent implements OnInit {
   }
 
   oneTask: any;
-  getOneTaskFromService(id:string){
+  getOneTaskFromService(id:string) {
     let observ = this._httpService.getOneTask(id);
     observ.subscribe(data => {
       console.log("Mhmm.",data);
       this.oneTask = data;
     });
   }
+
+  onButtonClick(): void { 
+    console.log(`Click event is working`);
+  }
+  onButtonClickParam(num: Number): void { 
+      console.log(`Click event is working with num param: ${num}`);
+  }
+  onButtonClickParams(num: Number, str: String): void { 
+      console.log(`Click event is working with num param: ${num} and str param: ${str}`);
+  }
+  onButtonClickEvent(event: any): void { 
+      console.log(`Click event is working with event: ${event}`);
+  }
+
 }

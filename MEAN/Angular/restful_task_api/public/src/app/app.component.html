@@ -318,11 +318,17 @@
 
   </div>
 
-  <h1>All tasks:</h1>
-  <h3 *ngFor="let task of tasks">{{task.title}} - {{task.description}}</h3>
-  <br>
-  <h1>The last task:</h1>
-  <h3>{{oneTask.title}} - {{oneTask.description}}</h3>
+  <button (click)="getTasksFromService()" >GET ALL TASKS</button>
+  <span *ngFor="let task of tasks">
+    <h3 style="display:inline-block">{{task.title}}</h3>
+    <button (click)="getOneTaskFromService(task._id)" style="display:inline-block">Show</button>
+  </span>
+
+  <div *ngIf="oneTask" style="border:1px solid black;text-align:center;width:15rem;">
+    <h3>{{oneTask.title}}</h3>
+    <h4>{{oneTask.description}}</h4>
+  </div>
+
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
