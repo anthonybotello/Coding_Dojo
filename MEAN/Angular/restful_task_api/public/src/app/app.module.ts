@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 
 import { HttpService } from './http.service';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

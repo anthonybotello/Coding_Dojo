@@ -5,5 +5,5 @@ module.exports = app => {
     app.get('/tasks/:id',controller.taskInfo);
     app.post('/tasks/',controller.create);
     app.put('/tasks/:id',controller.update);
-    app.delete('/task/:id',controller.delete);
+    app.delete('/tasks/:id',controller.delete);
 }

@@ -13,7 +13,17 @@ export class HttpService {
   getOneTask(id:string){
     return this._http.get(`/tasks/${id}`);
   }
-  postToServer(num){
-    return this._http.post('/tasks',num);
+  postToServer(data){
+    return this._http.post('/tasks',data);
+    // .subscribe(err => console.log(err));
+    // return this.getTasks();
+  }
+  delete(id:string){
+    this._http.delete(`/tasks/${id}`)
+    .subscribe();
+    return this.getTasks();
+  }
+  update(id:string,data){
+    return this._http.put(`/tasks/${id}`,data);
   }
 }
