@@ -1,0 +1,54 @@
+<style>
+.cake-info,.cake-ratings{
+    display:inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+}
+.cake-info img{
+    height:300px;
+    width: 300px;
+}
+.italic{
+    font-style: italic;
+}
+.cake-ratings ul span li{
+    list-style-type: none;
+    list-style-position: inside;
+    border:1px solid black;
+    margin: 2px 0;
+}
+mat-icon{
+    margin-left:10px;
+}
+.cake-ratings ul span li p{
+    padding: 0 10px;
+}
+.cake-ratings ul{
+    padding-left:0;
+}
+.cake-ratings h3{
+    height:30px;
+    padding-top: 10px;
+    padding-bottom:5px;
+    margin-bottom: 0;
+}
+</style>
+
+<div>
+    <div class="cake-info">
+        <h1>Baked by {{ showCake.baker }}</h1>
+        <img [src]="showCake.image">
+    </div>
+    <div class="cake-ratings">
+        <h3>Average rating: {{avgRating()}} stars</h3>
+        <ul>
+            <span *ngFor="let rating of showCake.ratings">
+                <li>
+                    <p class="italic">{{ rating.comment }}</p>
+                    <span *ngFor="let star of setStars(rating.rating)"><mat-icon>star</mat-icon></span>
+                    <span *ngFor="let notstar of notStars(rating.rating)"><mat-icon>star_border</mat-icon></span>
+                </li>
+            </span>
+        </ul>
+    </div>
+</div>
