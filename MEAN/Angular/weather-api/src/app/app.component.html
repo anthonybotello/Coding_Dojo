@@ -1,0 +1,9 @@
+<div class="header text-center mx-auto">
+    <h1 class="display-3">Dojo Weather Forecast</h1>
+    <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic">
+      <label *ngFor="let city of cities" ngbButtonLabel class="btn-outline-primary">
+          <input ngbButton type="radio" [value]="city.name" [routerLink]=city.route> {{city.name}}
+      </label>
+    </div>
+    <router-outlet></router-outlet> 
+</div>

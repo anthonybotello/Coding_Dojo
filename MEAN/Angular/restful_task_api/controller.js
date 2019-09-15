@@ -28,7 +28,6 @@ module.exports = {
             .catch(err => res.json(err));
     },
     delete: (req,res) => {
-        console.log("Well, here we are...",req.params.id);
         Task.remove({_id:req.params.id})
             .then(() => res.redirect('/'))
             .catch(err => res.json(err));

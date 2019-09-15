@@ -6,8 +6,7 @@ module.exports = {
             .then(game => res.json(game))
             .catch(err => res.json(err));
     },
-    update: (req,res) => {
-        console.log(req.body);
+update: (req,res) => {
         Game.findOne({_id:req.body.id})
             .then(oldGame => {
                 oldGame.gold += req.body.gold;

@@ -1,0 +1,38 @@
+<style>
+        .city-container{
+            max-width: 50%;
+            text-align: center;
+            margin: 1rem auto;
+            padding: 1rem 0;
+            border: 1px solid #212529;
+        }
+        .col img{
+            height: 12.5rem;
+        }
+        </style>
+        
+        <div class="city-container">
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col">
+                    <h2>Dallas, TX</h2>
+                </div>
+                <div class="col">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="weather-info">
+                        <p>Humidity: {{weather.main.humidity}}</p>
+                        <p>Temperature (Average): {{weather.main.temp}}</p>
+                        <p>Temperature (High): {{weather.main.temp_max}}</p>
+                        <p>Temperature (Low): {{weather.main.temp_min}}</p>
+                        <p>Status: {{weather.weather[0].description}}</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="https://images.pexels.com/photos/45182/dallas-texas-skyline-dusk-45182.jpeg" alt="Picture of Seattle" class="img-thumbnail"/>
+                </div>
+            </div>
+        </div>

@@ -8,7 +8,7 @@ import { HttpService } from './http.service';
 })
 export class AppComponent implements OnInit {
   title = 'Ninja Gold';
-  game = {};
+  game;
 
   constructor(private _httpService: HttpService){}
 
