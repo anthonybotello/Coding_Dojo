@@ -1,0 +1,21 @@
+<div class="header text-center mx-auto">
+  <h1 class="display-3">ShintoCoins</h1>
+  <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic">
+    <label ngbButtonLabel class="btn-outline-primary">
+        <input ngbButton type="radio" value="home" [routerLink]="['/']">Home
+    </label>
+    <label ngbButtonLabel class="btn-outline-primary">
+      <input ngbButton type="radio" value="mine" [routerLink]="['/mine']">Mine Coins
+    </label>
+    <label ngbButtonLabel class="btn-outline-primary">
+      <input ngbButton type="radio" value="buy" [routerLink]="['/buy']">Buy Coins
+    </label>
+    <label ngbButtonLabel class="btn-outline-primary">
+      <input ngbButton type="radio" value="sell" [routerLink]="['/sell']">Sell Coins
+    </label>
+    <label ngbButtonLabel class="btn-outline-primary">
+      <input ngbButton type="radio" value="browse" [routerLink]="['/ledger']">Browse Ledger
+    </label>
+  </div>
+</div>
+<router-outlet></router-outlet>

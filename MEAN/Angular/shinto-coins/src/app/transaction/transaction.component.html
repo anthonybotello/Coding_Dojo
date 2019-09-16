@@ -1,0 +1,31 @@
+<style>
+        .city-container{
+            max-width: 50%;
+            text-align: center;
+            margin: 1rem auto;
+            padding: 1rem 0;
+            border: 1px solid #212529;
+        }
+        .col img{
+            height: 12.5rem;
+        }
+        </style>
+        
+        <div class="city-container">
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col-10">
+                    <h2>Ledger Transaction Details</h2>
+                </div>
+                <div class="col">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col px-5">
+                    <p>Detailed view of a transaction from the ledger.</p>
+                    <p class="font-weight-bold">Transaction #{{trans.id}}</p>
+                    <p>{{trans.desc}}</p>
+                </div>
+            </div>
+        </div>

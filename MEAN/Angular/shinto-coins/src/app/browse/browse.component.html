@@ -1,0 +1,52 @@
+<style>
+.city-container{
+    max-width: 50%;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 1rem 0;
+    border: 1px solid #212529;
+}
+.col img{
+    height: 12.5rem;
+}
+.table{
+    width: 60%;
+    margin: 0 auto;
+}
+</style>
+
+<div class="city-container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-10">
+            <h2>Browse the Ledger</h2>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="px-5">Here you can browse all ShintoCoin transactions.</p>
+            <table class="table">
+                <thead>
+                    <tr><th colspan="12">ShintoCoins Ledger</th></tr>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Action</th>
+                        <th scope="col">Value</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let trans of ledger">
+                        <td>{{trans.id}}</td>
+                        <td>{{trans.action}}</td>
+                        <td>{{trans.value}}</td>
+                        <td><a class="btn btn-sm btn-primary text-white" [routerLink]="['/transaction/' + trans.id]">Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
