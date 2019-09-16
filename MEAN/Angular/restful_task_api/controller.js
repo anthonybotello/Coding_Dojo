@@ -32,4 +32,4 @@ module.exports = {
             .then(() => res.redirect('/'))
             .catch(err => res.json(err));
     }
-}
+} 

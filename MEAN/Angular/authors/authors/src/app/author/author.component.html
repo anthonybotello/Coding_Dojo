@@ -1,0 +1,14 @@
+<a [routerLink]="['/home']">Home</a>
+<p>{{author.name}}'s quotes:</p>
+<blockquote class="blockquote" *ngFor="let quote of author.quotes">
+    <p class="mb-0">"{{quote.quote}}"</p>
+</blockquote>
+<p class="invalid-feedback d-block" *ngIf="message;">{{message.quote.message}}</p>
+<div>
+    <form [formGroup]="quoteForm" (ngSubmit)="onSubmit(quoteForm.value,author._id)">
+        <div class="form-group">
+            <textarea rows="3" class="form-control" formControlName="quote" placeholder="Enter quote"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
