@@ -1,0 +1,16 @@
+<style>
+.root{
+  margin: 1rem 3rem;
+  border: 2px solid orange;
+  border-radius: .5rem;
+}
+</style>
+<div class="root">
+  <div class="p-3">
+    <h1>Route tree</h1>
+    <h5>The root component has an orange border.</h5>
+    <a [routerLink]="['/products']">Products</a> |
+    <a [routerLink]="['/reviews']">Reviews</a>
+  </div>
+  <router-outlet></router-outlet>
+</div>

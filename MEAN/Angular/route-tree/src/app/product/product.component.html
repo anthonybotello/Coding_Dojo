@@ -1,0 +1,17 @@
+<style>
+.parent{
+  margin: 1rem 3rem;
+  border: 2px solid purple;
+  border-radius: .5rem;
+}
+</style>
+<div class="parent">
+    <div class="p-3">
+        <h5>The product component has a purple border.</h5>
+        <h5>It's here because /products uses the router outlet in the root component.</h5>
+        <a [routerLink]="['details', getRandom()]">Details</a> |
+        <a [routerLink]="['brand', 'acer']">Brand</a> | 
+        <a [routerLink]="['category', 'electronics']">Category</a>
+    </div>
+<router-outlet></router-outlet>
+</div>

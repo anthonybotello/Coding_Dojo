@@ -1,0 +1,17 @@
+<style>
+.parent{
+    margin: 1rem 3rem;
+    border: 2px solid purple;
+    border-radius: .5rem;
+}
+</style>
+<div class="parent">
+    <div class="p-3">
+        <h5>The review component has a purple border.</h5>
+        <h5>It's here because /reviews uses the router outlet in the root component.</h5>
+        <a [routerLink]="['details', getRandom()]">Details</a> |
+        <a [routerLink]="['author', getRandom()]">Author</a> | 
+        <a [routerLink]="['all', getRandom()]">All</a>
+    </div>
+<router-outlet></router-outlet>
+</div>
