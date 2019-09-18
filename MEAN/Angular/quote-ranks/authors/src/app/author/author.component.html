@@ -1,0 +1,47 @@
+<style>
+.green-thumb{
+    color:rgb(17, 150, 0);
+}
+.red-thumb{
+    color:rgb(219, 0, 0);
+}
+.icon{
+    background-color: transparent;
+    border:none;
+    padding:0;
+    margin:0;
+}
+</style>
+
+<a [routerLink]="['/home']">Home</a>
+<p>{{author.name}}'s quotes:</p>
+<blockquote class="blockquote border border-dark p-3" *ngFor="let _quote of author.quotes">
+    <p class="mb-0">"{{_quote.quote}}"</p>
+    <div class="row mt-1">
+        <div class="col">
+            <button class="icon" (click)="quoteVote(_quote._id, _quote.votes + 1)"><mat-icon class="green-thumb mr-1">thumb_up</mat-icon></button>
+            <button class="icon" (click)="quoteVote(_quote._id,_quote.votes - 1)"><mat-icon class="red-thumb">thumb_down</mat-icon></button>
+            <small class="d-block">Votes: {{_quote.votes}}</small>
+        </div>
+        <div class="col text-right">
+            <button class="btn btn-sm btn-danger" (click)="quoteDelete(_quote._id)">Delete</button>
+        </div>
+    </div>
+</blockquote>
+<p class="invalid-feedback d-block" *ngIf="message;">{{message.quote.message}}</p>
+<div>
+    <form [formGroup]="quoteForm" (ngSubmit)="onSubmit(quoteForm.value,author._id)">
+        <div class="form-group">
+            <textarea rows="3" class="form-control" formControlName="quote" placeholder="Enter quote"></textarea>
+            <div *ngIf="(quote.invalid) && (quote.dirty || quote.touched)" class="alert alert-danger">
+                <div *ngIf="quote.errors.required">
+                    Quote cannot be blank.
+                </div>
+            </div>
+            <div *ngIf="quote.value && (quote.value.length > 0 && quote.value.trim() === '') && (quote.dirty || quote.touched)" class="alert alert-danger">
+                    Quote cannot be blank.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="quoteForm.invalid || quote.value.trim() === ''">Submit</button>
+    </form>
+</div>

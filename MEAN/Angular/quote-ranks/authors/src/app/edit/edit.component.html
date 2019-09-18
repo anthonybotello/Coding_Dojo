@@ -1,0 +1,12 @@
+<a [routerLink]="['/home']">Home</a>
+<p>Edit this author:</p>
+<p class="invalid-feedback d-block" *ngIf="message">{{message.name.message}}</p>
+<div>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit(editForm.value)">
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button class="btn btn-secondary ml-1" [routerLink]="['/home']">Cancel</button>
+    </form>
+</div>
